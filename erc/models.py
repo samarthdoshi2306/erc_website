@@ -18,7 +18,7 @@ class Team(models.Model):
 	name=models.CharField(max_length=80,blank=False)
 	#post = forms.ChoiceField(choices=POSTS, widget=forms.RadioSelect,blank=False)
 	post=models.CharField(max_length=80)
-	image=models.ImageField(upload_to='erc/team',blank=True)
+	image=models.ImageField(upload_to='erc/media/team',blank=True)
 
 class Blog(models.Model):
 	title=models.CharField(max_length=80)

@@ -19,6 +19,10 @@ class Team(models.Model):
 	#post = forms.ChoiceField(choices=POSTS, widget=forms.RadioSelect,blank=False)
 	post=models.CharField(max_length=80)
 	image=models.ImageField(upload_to='erc/media/team',blank=True)
+	fb=models.CharField(max_length=80,null=True,blank=True)
+	linkedin=models.CharField(max_length=80,null=True,blank=True)
+	github=models.CharField(max_length=80, null=True, blank=True)
+
 
 class Blog(models.Model):
 	title=models.CharField(max_length=80)

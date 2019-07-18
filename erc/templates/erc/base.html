@@ -3,14 +3,16 @@
 <head>
 {% load static %}
   <meta charset="utf-8">
-  <title>NewBiz Bootstrap Template</title>
+  <title>Electronics and Robotics Club</title>
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
   <meta content="" name="keywords">
-  <meta content="" name="description">
+  <meta content="A place for tinkerers and the sort!" name="description">
+  <meta name="twitter:description" content="A place for tinkerers and the sort!">
+  <meta name="twitter:card" content="summary">
 
   <!-- Favicons -->
-  <link href="img/favicon.png" rel="icon">
-  <link href="img/apple-touch-icon.png" rel="apple-touch-icon">
+  <link href="{% static 'erc/img/favicon.ico' %}" rel="icon">
+  <link href="{% static 'erc/img/apple-touch-icon.png' %}" rel="apple-touch-icon">
 
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Montserrat:300,400,500,700" rel="stylesheet">
@@ -41,7 +43,7 @@
   <!--==========================
   Header
   ============================-->
-  <header id="header" class="fixed-top">
+  <header id="header" class="fixed-top" style="background-color: white; opacity: 0.95;">
     <div class="container">
 
       <div class="logo float-left">
@@ -52,7 +54,7 @@
 
       <nav class="main-nav float-right d-none d-lg-block">
         <ul>
-          <li class="active"><a href="#intro">Home</a></li>
+          <li class="active" style="color:red;"><a href="#intro">Home</a></li>
           <li><a href="#about">About Us</a></li>
           <li><a href="#services">Services</a></li>
           <li><a href="#portfolio">Portfolio</a></li>
@@ -92,10 +94,10 @@
       </div>
 
       <div class="intro-info">
-        <h2 style="font-style: italic;">Electronics and <br><span>Robotics club,</span><br>IIT Bombay</h2>
+        <h2 style="font-style: italic; font-weight: bold;">Electronics and <br>Robotics club<br>IIT Bombay</h2>
         <div>
-          <a href="#about" class="btn-get-started scrollto">Get Started</a>
-          <a href="#services" class="btn-services scrollto">Our Services</a>
+          <a href="#about" class="btn-get-started scrollto">About Us 😇</a>
+          <a href="#portfolio" class="btn-services scrollto">Our Events</a>
         </div>
       </div>
 
@@ -113,16 +115,13 @@
         <header class="section-header">
           <h3>About Us</h3>
           <p >
-            <img src="{% static 'erc/img/sitelogo.png' %}" class="sitelogo"> <br> <br>
-            Hello there! Greetings from Electronics & Robotics Club IIT Bombay! <br>
-            We cater to every individual who ever wanted to <br>
-            design their own circuit and control their own bot. <br>
+            <img src="{% static 'erc/img/sitelogo.png' %}" class="sitelogo"> 
           </p>
         </header>
 
         <div class="row about-container">
 
-          <div class="col-lg-6 content order-lg-1 order-2">
+          <!-- <div class="col-lg-6 content order-lg-1 order-2">
             <p>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
             </p>
@@ -155,19 +154,27 @@
         <div class="row about-extra">
           <div class="col-lg-6 wow fadeInUp">
             <img src="img/about-extra-1.svg" class="img-fluid" alt="">
-          </div>
-          <div class="col-lg-6 wow fadeInUp pt-5 pt-lg-0">
-            <h4>Voluptatem dignissimos provident quasi corporis voluptates sit assumenda.</h4>
-            <p>
-              Ipsum in aspernatur ut possimus sint. Quia omnis est occaecati possimus ea. Quas molestiae perspiciatis occaecati qui rerum. Deleniti quod porro sed quisquam saepe. Numquam mollitia recusandae non ad at et a.
+          </div> -->
+          <div>
+            <h4><p  style="text-align: center;" >
+             <!-- <br> <br> -->
+            
+            Hello there! Greetings from Electronics & Robotics Club IIT Bombay!
+            We cater to every individual who ever wanted to
+            design their own circuit and control their own bot. <br></h4>
+            <p style="text-align: center;">
+              We are a club that satiates the techie you all possess! The Electronics and Robotics Club was born from the two of its parent clubs(guess which? :P), 2017 being the year of christening. We are headed by our Manager, Jian Vora and our Institute Secretary, Anirudh Mittal. We are a part of ITC, or the Institute Technical Council, IIT Bombay's primary technical body. Other than that we have six conveners along with many volunteers.
             </p>
-            <p>
-              Ad vitae recusandae odit possimus. Quaerat cum ipsum corrupti. Odit qui asperiores ea corporis deserunt veritatis quidem expedita perferendis. Qui rerum eligendi ex doloribus quia sit. Porro rerum eum eum.
+            <p style="text-align: center;">
+              The main function of the club is to organize events like Sessions, Hackathons, GCs, Competitions, Workshops, etc. throughout the year. We also maintain a tutorial database and a blog and we are ALWAYS open for contribuitions.
+            </p>
+            <p style="text-align: center; margin-bottom: 0px;" >
+              We love people contacting us, so drop us a line on Facebook, we'll be waiting! <br>  <h1  style="text-align: center;">😃 </h1> 
             </p>
           </div>
         </div>
 
-        <div class="row about-extra">
+        <!-- <div class="row about-extra">
           <div class="col-lg-6 wow fadeInUp order-1 order-lg-2">
             <img src="img/about-extra-2.svg" class="img-fluid" alt="">
           </div>
@@ -187,6 +194,10 @@
           
         </div>
 
+      </div>
+      -->
+
+      <div class="col-lg-6 wow fadeInUp pt-5 pt-lg-0">
       </div>
     </section><!-- #about -->
 

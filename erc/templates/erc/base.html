@@ -40,7 +40,7 @@
 
 <body>
 
-  <!--==========================
+ <!--==========================
   Header
   ============================-->
   <header id="header" class="fixed-top" style="background-color: white; opacity: 0.95;">
@@ -48,8 +48,8 @@
 
       <div class="logo float-left">
         <!-- Uncomment below if you prefer to use an image logo -->
-        <!-- <h1 class="text-light"><a href="#header"><span>NewBiz</span></a></h1> -->
-        <a href="#intro" class="scrollto"><img src="img/logo.png" alt="" class="img-fluid"></a>
+         <!--h1 class="text-light"><a href="#header"><span>ERC</span></a></h1--> 
+        <a href="#intro" class="scrollto"><img src="{%static 'erc/img/favicon.ico' %}" alt="" class="img-fluid"><span>&#xA0;ERC</span></a>
       </div>
 
       <nav class="main-nav float-right d-none d-lg-block">
@@ -96,7 +96,7 @@
       <div class="intro-info">
         <h2 style="font-style: italic; font-weight: bold;">Electronics and <br>Robotics club<br>IIT Bombay</h2>
         <div>
-          <a href="#about" class="btn-get-started scrollto">About Us 😇</a>
+          <a href="#about" class="btn-get-started scrollto">About Us </a>
           <a href="#portfolio" class="btn-services scrollto">Our Events</a>
         </div>
       </div>
@@ -155,7 +155,7 @@
           <div class="col-lg-6 wow fadeInUp">
             <img src="img/about-extra-1.svg" class="img-fluid" alt="">
           </div> -->
-          <div>
+          <div >
             <h4><p  style="text-align: center;" >
              <!-- <br> <br> -->
             
@@ -163,10 +163,10 @@
             We cater to every individual who ever wanted to
             design their own circuit and control their own bot. <br></h4>
             <p style="text-align: center;">
-              We are a club that satiates the techie you all possess! The Electronics and Robotics Club was born from the two of its parent clubs(guess which? :P), 2017 being the year of christening. We are headed by our Manager, Jian Vora and our Institute Secretary, Anirudh Mittal. We are a part of ITC, or the Institute Technical Council, IIT Bombay's primary technical body. Other than that we have six conveners along with many volunteers.
+              We are a club that satiates the techie you all possess! The Electronics and Robotics Club was born from the two of its parent clubs(guess which? :p), 2017 being the year of christening. We are headed by our Manager, Jian Vora and our Institute Secretary, Anirudh Mittal. We are a part of ITC, or the Institute Technical Council, IIT Bombay's primary technical body. Other than that we have seven conveners along with many volunteers.
             </p>
             <p style="text-align: center;">
-              The main function of the club is to organize events like Sessions, Hackathons, GCs, Competitions, Workshops, etc. throughout the year. We also maintain a tutorial database and a blog and we are ALWAYS open for contribuitions.
+              The main function of the club is to organize events like Sessions, Hackathons, General Championships, Competitions, Workshops, etc. throughout the year. We also maintain a tutorial database and a blog and we are ALWAYS open for contribuitions.
             </p>
             <p style="text-align: center; margin-bottom: 0px;" >
               We love people contacting us, so drop us a line on Facebook, we'll be waiting! <br>  <h1  style="text-align: center;">😃 </h1> 
@@ -363,7 +363,7 @@
 
           <div class="col-lg-4 col-md-6 portfolio-item filter-app">
             <div class="portfolio-wrap">
-              <img src="img/portfolio/app1.jpg" class="img-fluid" alt="">
+              <img src="media/blah.jpg" class="img-fluid" alt="">
               <div class="portfolio-info">
                 <h4><a href="#">App 1</a></h4>
                 <p>App</p>
@@ -567,8 +567,8 @@
     <section id="team">
       <div class="container">
         <div class="section-header">
-          <h3>Team</h3>
-          <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque</p>
+          <h3>Our Team</h3>
+          <p><strong>Filled with texiness ;)</strong></p>
         </div>
 
         <div class="row">
@@ -593,11 +593,11 @@
 
           <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
             <div class="member">
-              <img src="img/team-2.jpg" class="img-fluid" alt="">
+              <img src="{{team.image.url}}" class="img-fluid" alt="">
               <div class="member-info">
                 <div class="member-info-content">
-                  <h4>Sarah Jhonson</h4>
-                  <span>Product Manager</span>
+                  <h4>{{team.name}}</h4>
+                  <span>{{team.post}}</span>
                   <div class="social">
                     <a href=""><i class="fa fa-twitter"></i></a>
                     <a href=""><i class="fa fa-facebook"></i></a>
@@ -842,25 +842,25 @@
       </div>
     </div>
 
-    <div class="container">
+    <!--div class="container">
       <div class="copyright">
         &copy; Copyright <strong>NewBiz</strong>. All Rights Reserved
       </div>
       <div class="credits">
-        <!--
+        <
           All the links in the footer should remain intact.
           You can delete the links only if you purchased the pro version.
           Licensing information: https://bootstrapmade.com/license/
           Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/buy/?theme=NewBiz
-        -->
+        >
         Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
-      </div>
+      </div-->
     </div>
   </footer><!-- #footer -->
 
   <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
   <!-- Uncomment below i you want to use a preloader -->
-  <!-- <div id="preloader"></div> -->
+  < <div id="preloader"></div> >
 
   <!-- JavaScript Libraries -->
   <script src="{% static 'erc/lib/jquery/jquery.min.js'  %}"></script>

@@ -1,6 +1,9 @@
 from django.db import models
 
 # Create your models here.
+# POSTS=[('Convener','Convener'),
+#          ('Volunteer','Volunteer'),
+#          ('Manager','Manager')]
 
 class Event(models.Model):
 	name=models.CharField(max_length=80)
@@ -10,6 +13,16 @@ class Event(models.Model):
 	content=models.TextField(null=True,blank=True)
 	date=models.DateField(null=True,blank=True)
 	img=models.ImageField(max_length=100)
+
+class Team(models.Model):
+	name=models.CharField(max_length=80,blank=False)
+	#post = forms.ChoiceField(choices=POSTS, widget=forms.RadioSelect,blank=False)
+	post=models.CharField(max_length=80)
+	image=models.ImageField(upload_to='erc/media/team',blank=True)
+	fb=models.CharField(max_length=80,null=True,blank=True)
+	linkedin=models.CharField(max_length=80,null=True,blank=True)
+	github=models.CharField(max_length=80, null=True, blank=True)
+
 
 class Blog(models.Model):
 	title=models.CharField(max_length=80)

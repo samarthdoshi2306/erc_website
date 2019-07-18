@@ -572,19 +572,21 @@
           <h3>Our Team</h3>
           <p><strong>Filled with techsiness ;)</strong></p>
         </div>
-        <div></div>
+        
         <div class="row">
+          <!--managers-->
           <div class="col-lg-3 col-md-6 wow fadeInUp"></div>
+
           <div class="col-lg-3 col-md-6 wow fadeInUp">
             <div class="member">
-              <img src={{team.image.url}} class="img-fluid" alt="">
+              <img src="{{jian.image.url}}" class="img-fluid" alt="">
               <div class="member-info">
                 <div class="member-info-content">
-                  <h4>Walter White</h4>
-                  <span>Chief Executive Officer</span>
+                  <h4>{{jian.name}}</h4>
+                  <span>{{jian.post}}</span>
                   <div class="social">
                     <a href=""><i class="fa fa-twitter"></i></a>
-                    <a href=""><i class="fa fa-facebook"></i></a>
+                    <a href="{{jian.Fb}}"><i class="fa fa-facebook"></i></a>
                     <a href=""><i class="fa fa-google-plus"></i></a>
                     <a href=""><i class="fa fa-linkedin"></i></a>
                   </div>
@@ -593,16 +595,16 @@
             </div>
           </div>
 
-          <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+          <div class="col-lg-3 col-md-6 wow fadeInUp">
             <div class="member">
-              <img src="{{team.image.url}}" class="img-fluid" alt="">
+              <img src="{{anirudh.image.url}}" class="img-fluid" alt="">
               <div class="member-info">
                 <div class="member-info-content">
-                  <h4>{{team.name}}</h4>
-                  <span>{{team.post}}</span>
+                  <h4>{{anirudh.name}}</h4>
+                  <span>{{anirudh.post}}</span>
                   <div class="social">
                     <a href=""><i class="fa fa-twitter"></i></a>
-                    <a href=""><i class="fa fa-facebook"></i></a>
+                    <a href="{{anirudh.Fb.url}}"><i class="fa fa-facebook"></i></a>
                     <a href=""><i class="fa fa-google-plus"></i></a>
                     <a href=""><i class="fa fa-linkedin"></i></a>
                   </div>
@@ -610,20 +612,25 @@
               </div>
             </div>
           </div>
+
           <div class="col-lg-3 col-md-6 wow fadeInUp"></div>
 
-
-          
-          <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.2s">
+        </div>
+          <!--conveners-->
+          <br><br><br><br><br>         
+        <div class="row">
+          {% for member in team %}
+            {%if member.post == "Convener" %}
+            <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.2s">
             <div class="member">
-              <img src="{{team.image.url}}" class="img-fluid" alt="">
+              <img src="{{member.image.url}}" class="img-fluid" alt="">
               <div class="member-info">
                 <div class="member-info-content">
-                  <h4>William Anderson</h4>
-                  <span>CTO</span>
+                  <h4>{{member.name}}</h4>
+                  <span>{{member.post}}</span>
                   <div class="social">
                     <a href=""><i class="fa fa-twitter"></i></a>
-                    <a href=""><i class="fa fa-facebook"></i></a>
+                    <a href="{{member.facebook}}"><i class="fa fa-facebook"></i></a>
                     <a href=""><i class="fa fa-google-plus"></i></a>
                     <a href=""><i class="fa fa-linkedin"></i></a>
                   </div>
@@ -631,29 +638,39 @@
               </div>
             </div>
           </div>
-
-          <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
-            <div class="member">
-              <img src="{{team.image.url}}" class="img-fluid" alt="">
-              <div class="member-info">
-                <div class="member-info-content">
-                  <h4>Amanda Jepson</h4>
-                  <span>Accountant</span>
-                  <div class="social">
-                    <a href=""><i class="fa fa-twitter"></i></a>
-                    <a href=""><i class="fa fa-facebook"></i></a>
-                    <a href=""><i class="fa fa-google-plus"></i></a>
-                    <a href=""><i class="fa fa-linkedin"></i></a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
+          {%endif%}
+          {%endfor%}
         </div>
 
+        <br><br><br><br><br>
+
+        <div class="row">
+          {% for member in team %}
+            {%if member.post == "Volunteer" %}
+            <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.2s">
+            <div class="member">
+              {%if member.image %}
+              <img src="{{member.image.url}}" class="img-fluid" alt="">
+              {%endif%}
+              <div class="member-info">
+                <div class="member-info-content">
+                  <h4>{{member.name}}</h4>
+                  <span>{{member.post}}</span>
+                  <div class="social">
+                    <a href=""><i class="fa fa-twitter"></i></a>
+                    <a href="{{member.facebook.url}}"><i class="fa fa-facebook"></i></a>
+                    <a href=""><i class="fa fa-google-plus"></i></a>
+                    <a href=""><i class="fa fa-linkedin"></i></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          {%endif%}
+          {%endfor%}
+        </div>
       </div>
-    </section><!-- #team -->
+    </section>
 
     <!--==========================
       Clients Section

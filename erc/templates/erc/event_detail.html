@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -54,7 +55,7 @@
           <li class="active" style="color:red;"><a href="#intro">Home</a></li>
           <li><a href="#about">About Us</a></li>
           <li><a href="#services">Services</a></li>
-          <li><a href="/home">Portfolio</a></li>
+          <li><a href="#portfolio">Portfolio</a></li>
           <li><a href="#team">Team</a></li>
           <li class="drop-down"><a href="">Drop Down</a>
             <ul>
@@ -99,5 +100,36 @@
 
     </div>
   </section><!-- #intro -->
+  <br>
+  <br>
+  <div align="center"><img src={{event.img.url}} height="400" width="600"></div>
+  <br>
+  <div align="center" ><h1 style="font-style:italic;text-shadow: 2px 2px 5px red"><b>{{event.name}}</b></h1></div>>
+  {% if event.date%}
+    <div align="center"><h2 style="color:blue"><img src="https://img.icons8.com/wired/64/000000/calendar.png">{{event.date}}</h2></div>
+  {%endif%}
+  {% if event.content%}
+  <p style="margin-left: 140px;margin-right:140px">{{event.content}}</p>
+  {%endif%}
+  <br>
+  {% if event.event_status%}
+    <div align="center"><h2>{{event.event_status}}</h2></div>
+  {%endif%}
+  {% if event.name == "XLR8" %}
+  <div align="center" ><a href="https://docs.google.com/forms/d/e/1FAIpQLSfJRMDFBfvSNFEhPLVSkgrGMwXQixkRp-XNLm9br60NkoHp5g/closedform" class="button" style= "background-color: red;color: white;border: 2px solid #555555;font-size: 20px;padding: 20px 34px;border-radius: 12px;">Register</a></div>
+  <br>
+  <br>
+  <br>
+  <div align="center"><h3 style="text-shadow: 2px 2px 5px red">PROBLEM STATEMENT</h3><iframe src="{{event.problem_statement.url}}" height="1000" width="800"></iframe></div>>
+  <br>
+  <div align="center" ><a href="#" class="button" style= "background-color: white;color: red;border: none;font-size: 20px;padding: 20px 34px;border-radius: 12px;"><h2>LINK TO THE TUTORIAL</h2></a></div>
+  <div align="center"><h3 style="text-shadow: 2px 2px 5px red">DEMO VIDEO</h3></div>
+  <div align="center"><video width="400" controls>
+  <source src="{{event.video}}" type="video/mp4">
+  </video></div>
+  {%endif%}
+  <br>
+  <br>
 </body>
 </html>
+

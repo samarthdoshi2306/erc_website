@@ -32,14 +32,18 @@ class Blog(models.Model):
 
 class BlogPart(models.Model):
 	Blogtitle=models.CharField(max_length=80,null=False)
-	content=models.TextField(null=False)
+	content=models.TextField(blank=True)
 	partNum=models.DecimalField(decimal_places=2,max_digits=2,null=False)
-
-
-class BlogPic(models.Model):
 	img=models.ImageField(upload_to='media/blogs',
 		height_field=None,
 		width_field=None,
-		max_length=100)
-	BlogTitle=models.CharField(max_length=80,null=False)
-	BlogPartNum=models.DecimalField(decimal_places=2,max_digits=2,null=False,default=False)
+		max_length=100,
+		blank=True)
+
+# class BlogPic(models.Model):
+# 	img=models.ImageField(upload_to='media/blogs',
+# 		height_field=None,
+# 		width_field=None,
+# 		max_length=100)
+# 	BlogTitle=models.CharField(max_length=80,null=False)
+# 	BlogPartNum=models.DecimalField(decimal_places=2,max_digits=2,null=False,default=False)

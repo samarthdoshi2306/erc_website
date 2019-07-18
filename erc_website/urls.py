@@ -20,6 +20,5 @@ from django.conf.urls.static import static
 from django.conf import settings
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', home_view , name='home'),
-    path('<int:Event_id>/',event_detail, name='event_detail')
-]+static(settings.MEDIA_URL)
+    path('erc/',include('erc.urls')),
+]+static(settings.MEDIA_URL,document_root=settings.MEDIA_ROOT)

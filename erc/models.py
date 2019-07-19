@@ -14,6 +14,9 @@ class Event(models.Model):
 	date=models.DateField(null=True,blank=True)
 	img=models.ImageField(upload_to='media/events',max_length=100)
 
+	def get_absolute_url(self):
+		return reverse('erc:event',kwargs={'Event_id':self.id})
+
 class Team(models.Model):
 	name=models.CharField(max_length=80,blank=False)
 	#post = forms.ChoiceField(choices=POSTS, widget=forms.RadioSelect,blank=False)

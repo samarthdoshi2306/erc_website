@@ -35,7 +35,7 @@ class BlogPart(models.Model):
 	content=models.TextField(blank=True)
 	partNum=models.IntegerField()
 	img=models.ImageField(upload_to='media/blogs',
-		height_field=NoneInteger_field=None,
+		height_field=NonInteger_field=None,
 		max_length=100,
 		blank=True)
 

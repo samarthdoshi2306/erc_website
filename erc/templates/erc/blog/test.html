@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+
+<script>
+	var images=[]
+	function getURL(part){
+		images={{blog|safe}}
+
+		return images[part-1]
+	};
+	console.log(getURL(2));
+</script>
+
+<img onload="this.onload=null; this.src=getURL(1);" />

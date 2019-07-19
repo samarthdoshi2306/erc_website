@@ -28,8 +28,8 @@ def event_detail(request,Event_id):
 	return render(request,'erc/event_detail.html',{'event':event})
 
 def blog_view(request, *args, **kwargs):
-	blog = Blog.objects.filter(Blogtitle = 'Get Electrified 3').order_by('partNum')
-	return render(request,"erc/BlogBase.html",{'blog' :Blog,})
+	blog = Blog.objects.filter(Blogtitle = 'Get Electrified 3')	.order_by('partNum')
+	return render(request,"erc/BlogBase.html",{'blog' :blog,})
 
 
 	

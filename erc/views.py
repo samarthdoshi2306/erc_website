@@ -1,6 +1,7 @@
 from django.http import Http404
 from django.shortcuts import render
 from .models import *
+from .models import BlogPart as Blog
 from django.db import connections
 
 # Create your views here.
@@ -18,9 +19,17 @@ def home_view (request, *args, **kwargs):
 	}
 	return render(request,"erc/index.html",content)
 
+
 def event_detail(request,Event_id):
 	try:
 		event=Event.objects.get(pk=Event_id)
 	except Event.DoesNotExist:
 		raise Http404("Event Does Not Exist")
 	return render(request,'erc/event_detail.html',{'event':event})
+
+def blog_view(request, *args, **kwargs):
+	blog = Blog.objects.filter(Blogtitle = 'Get Electrified 3')	.order_by('partNum')
+	return render(request,"erc/BlogBase.html",{'blog' :blog,})
+
+
+	

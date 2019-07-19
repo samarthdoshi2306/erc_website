@@ -1,6 +1,6 @@
 from django.contrib import admin
 from django.urls import include,path
-from .views import home_view,event_detail
+from .views import home_view,event_detail,blog_view
 from django.conf.urls.static import static
 from django.conf import settings
 
@@ -11,7 +11,7 @@ urlpatterns = [
     #events page
     path('events/<int:Event_id>/',event_detail, name='event_detail'),
     #blogs page
-
+    path('blog',blog_view, name='blogs'),
     #newsletter page
 
 

@@ -1,7 +1,6 @@
 from django.http import Http404
 from django.shortcuts import render
 from .models import *
-from .models import BlogPart as Blog
 from django.db import connections
 
 # Create your views here.
@@ -28,8 +27,16 @@ def event_detail(request,Event_id):
 	return render(request,'erc/event_detail.html',{'event':event})
 
 def blog_view(request, *args, **kwargs):
-	blog = Blog.objects.filter(Blogtitle = 'Get Electrified 3')	.order_by('partNum')
-	return render(request,"erc/BlogBase.html",{'blog' :blog,})
+	blog = BlogPart.objects.filter(
+		Blogtitle = 'Get Electrified 3').order_by('partNum').values_list('img')
+	images = list(blog)
+	img=[]
+	for image in images:
+		img.append(image[0])
+	content={
+	'blog' :img,
+	}
+	return render(request,"erc/blog/test.html",content)
 
 
 	

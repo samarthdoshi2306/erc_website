@@ -42,6 +42,8 @@ class BlogPart(models.Model):
 		width_field=None,
 		max_length=100,
 		blank=True)
+	# def __str__(self):
+	# 	return '%s'%self.img.url
 
 class Newsletter(models.Model):
 	title=models.CharField(max_length=100)

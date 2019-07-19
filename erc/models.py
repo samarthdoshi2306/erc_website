@@ -26,14 +26,14 @@ class Team(models.Model):
 
 class Blog(models.Model):
 	title=models.CharField(max_length=80)
-	parts=models.IntegerField(decimal_places=2,max_digits=2)
+	parts=models.IntegerField()
 	author=models.CharField(max_length=80)
 	date=models.DateTimeField()
 
 class BlogPart(models.Model):
 	Blogtitle=models.CharField(max_length=80,null=False)
 	content=models.TextField(blank=True)
-	partNum=models.IntegerField(decimal_places=2,max_digits=2,null=False)
+	partNum=models.IntegerField()
 	img=models.ImageField(upload_to='media/blogs',
 		height_field=None,
 		width_field=None,

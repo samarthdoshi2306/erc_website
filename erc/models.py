@@ -26,17 +26,16 @@ class Team(models.Model):
 
 class Blog(models.Model):
 	title=models.CharField(max_length=80)
-	parts=models.DecimalField(decimal_places=2,max_digits=2)
+	parts=models.IntegerField(decimal_places=2,max_digits=2)
 	author=models.CharField(max_length=80)
-	date=models.DateTimeField()
+	date=models.DateTIntegerd()
 
 class BlogPart(models.Model):
 	Blogtitle=models.CharField(max_length=80,null=False)
 	content=models.TextField(blank=True)
-	partNum=models.DecimalField(decimal_places=2,max_digits=2,null=False)
+	partNum=models.InetegerField(decimal_places=2,max_digits=2,null=False)
 	img=models.ImageField(upload_to='media/blogs',
-		height_field=None,
-		width_field=None,
+		height_field=NoneInetegerth_field=None,
 		max_length=100,
 		blank=True)
 

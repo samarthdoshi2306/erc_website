@@ -1,5 +1,5 @@
 from django.db import models
-
+from django.urls import reverse
 # Create your models here.
 # POSTS=[('Convener','Convener'),
 #          ('Volunteer','Volunteer'),
@@ -15,7 +15,7 @@ class Event(models.Model):
 	img=models.ImageField(upload_to='media/events',max_length=100)
 
 	def get_absolute_url(self):
-		return reverse('erc:event',kwargs={'Event_id':self.id})
+		return reverse('erc:event_detail',kwargs={'Event_id':self.id})
 
 class Team(models.Model):
 	name=models.CharField(max_length=80,blank=False)

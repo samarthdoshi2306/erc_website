@@ -9,7 +9,7 @@ def home_view (request, *args, **kwargs):
 	jian=Team.objects.get(id=3)
 	team=Team.objects.all()
 	event=Event.objects.all()
-
+	
 	content={
 	'anirudh':anirudh,
 	'jian':jian,

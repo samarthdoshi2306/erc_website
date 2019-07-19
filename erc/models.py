@@ -13,7 +13,7 @@ class Event(models.Model):
 	content=models.TextField(null=True,blank=True)
 	date=models.DateField(null=True,blank=True)
 	img=models.ImageField(upload_to='media/events',max_length=100)
-
+	filterClass=models.CharField(max_length=80,blank=True)
 	def get_absolute_url(self):
 		return reverse('erc:event_detail',kwargs={'Event_id':self.id})
 

@@ -38,5 +38,10 @@ def blog_view(request, *args, **kwargs):
 	}
 	return render(request,"erc/blog/test.html",content)
 
-
+def newsletter_detail(request,Newsletter_id):
+	try:
+		newsletter=Newsletter.objects.get(pk=Newsletter_id)
+	except Newsletter.DoesNotExist:
+		raise Http404("Newsletter Does Not Exist")
+	return render(request,'erc/newsletter_detail.html',{'newsletter':newsletter})
 	

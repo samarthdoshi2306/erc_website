@@ -1,86 +1,31 @@
+{% extends 'erc/base_events_news.html' %}
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-{% load static %}
-  <meta charset="utf-8">
-  <title>{{event.name}}</title>
-  <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <meta content="" name="keywords">
-  <meta content="A place for tinkerers and the sort!" name="description">
-  <meta name="twitter:description" content="A place for tinkerers and the sort!">
-  <meta name="twitter:card" content="summary">
+{% block title %}{{event.name}}{% endblock %}
 
-  <!-- Favicons -->
-  <link href="{% static 'erc/img/favicon.ico' %}" rel="icon">
-  <link href="{% static 'erc/img/apple-touch-icon.png' %}" rel="apple-touch-icon">
 
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Montserrat:300,400,500,700" rel="stylesheet">
+{% block head %}
+<style>
+    .square_btn{
+    display: inline-block;
+    padding: 7px 20px;
+	border-radius: 25px;
+    text-decoration: none;
+    color: #FFF;
+    background-image: -webkit-linear-gradient(45deg, #FFC107 0%, #ff8b5f 100%);
+    background-image: linear-gradient(45deg, #FFC107 0%, #ff8b5f 100%);
+    transition: .4s;
+}
 
-  <!-- Bootstrap CSS File -->
-  <link href="{% static 'erc/lib/bootstrap/css/bootstrap.min.css' %}"rel="stylesheet">
+.square_btn:hover {
+    background-image: -webkit-linear-gradient(45deg, #FFC107 0%, #f76a35 100%);
+    background-image: linear-gradient(45deg, #FFC107 0%, #f76a35 100%);
+}
+</style>
+{% endblock %}
 
-  <!-- Libraries CSS Files -->
-  <link href="{% static 'erc/lib/font-awesome/css/font-awesome.min.css' %}" rel="stylesheet">
-  <link href="{% static 'erc/lib/animate/animate.min.css' %}" rel="stylesheet">
-  <link href="{% static 'erc/lib/ionicons/css/ionicons.min.css' %}" rel="stylesheet">
-  <link href="{% static 'erc/lib/owlcarousel/assets/owl.carousel.min.css' %}" rel="stylesheet">
-  <link href="{% static 'erc/lib/lightbox/css/lightbox.min.css' %}" rel="stylesheet">
 
-  <!-- Main Stylesheet File -->
-  <link href="{% static 'erc/css/style.css' %}" rel="stylesheet">
-
-  <!-- =======================================================
-    Theme Name: NewBiz
-    Theme URL: https://bootstrapmade.com/newbiz-bootstrap-business-template/
-    Author: BootstrapMade.com
-    License: https://bootstrapmade.com/license/
-  ======================================================= -->
-<body>
-  <!--==========================
-  Header
-  ============================-->
-  <header id="header" class="fixed-top" style="background-color: white; opacity: 0.95;">
-    <div class="container">
-
-      <div class="logo float-left">
-        <!-- Uncomment below if you prefer to use an image logo -->
-        <!-- <h1 class="text-light"><a href="#header"><span>NewBiz</span></a></h1> -->
-        <a href="#intro" class="scrollto"><img src="img/logo.png" alt="" class="img-fluid"></a>
-      </div>
-
-      <nav class="main-nav float-right d-none d-lg-block">
-        <ul>
-          <li class="active" style="color:red;"><a href="#intro">Home</a></li>
-          <li><a href="#about">About Us</a></li>
-          <li><a href="#services">Services</a></li>
-          <li><a href="#portfolio">Portfolio</a></li>
-          <li><a href="#team">Team</a></li>
-          <li class="drop-down"><a href="">Drop Down</a>
-            <ul>
-              <li><a href="#">Drop Down 1</a></li>
-              <li class="drop-down"><a href="#">Drop Down 2</a>
-                <ul>
-                  <li><a href="#">Deep Drop Down 1</a></li>
-                  <li><a href="#">Deep Drop Down 2</a></li>
-                  <li><a href="#">Deep Drop Down 3</a></li>
-                  <li><a href="#">Deep Drop Down 4</a></li>
-                  <li><a href="#">Deep Drop Down 5</a></li>
-                </ul>
-              </li>
-              <li><a href="#">Drop Down 3</a></li>
-              <li><a href="#">Drop Down 4</a></li>
-              <li><a href="#">Drop Down 5</a></li>
-            </ul>
-          </li>
-          <li><a href="#contact">Contact Us</a></li>
-        </ul>
-      </nav><!-- .main-nav -->
-
-    </div>
-  </header><!-- #header -->
-  <!--==========================
+{% block body %}
+ <!--==========================
     Intro Section
   ============================-->
   <section id="intro" class="clearfix">
@@ -92,10 +37,6 @@
 
       <div class="intro-info">
         <h2 style="font-style: italic; font-weight: bold;">Electronics and <br>Robotics club<br>IIT Bombay</h2>
-        <div>
-          <a href="#about" class="btn-get-started scrollto">About Us</a>
-          <a href="#portfolio" class="btn-services scrollto">Our Events</a>
-        </div>
       </div>
 
     </div>
@@ -104,7 +45,7 @@
   <br>
   <div align="center"><img src={{event.img.url}} height="400" width="600"></div>
   <br>
-  <div align="center" ><h1 style="font-style:italic;text-shadow: 2px 2px 5px red"><b>{{event.name}}</b></h1></div>>
+  <div align="center" ><h1 style="font-style:italic"><b>{{event.name}}</b></h1></div>>
   {% if event.date%}
     <div align="center"><h2 style="color:blue"><img src="https://img.icons8.com/wired/64/000000/calendar.png">{{event.date}}</h2></div>
   {%endif%}
@@ -116,20 +57,21 @@
     <div align="center"><h2>{{event.event_status}}</h2></div>
   {%endif%}
   {% if event.name == "XLR8" %}
-  <div align="center" ><a href="https://docs.google.com/forms/d/e/1FAIpQLSfJRMDFBfvSNFEhPLVSkgrGMwXQixkRp-XNLm9br60NkoHp5g/closedform" class="button" style= "background-color: red;color: white;border: 2px solid #555555;font-size: 20px;padding: 20px 34px;border-radius: 12px;">Register</a></div>
+  <div align="center" ><a href="https://docs.google.com/forms/d/e/1FAIpQLSfJRMDFBfvSNFEhPLVSkgrGMwXQixkRp-XNLm9br60NkoHp5g/closedform" class="square_btn" >Register</a></div>
   <br>
   <br>
   <br>
   <div align="center"><h3 style="text-shadow: 2px 2px 5px red">PROBLEM STATEMENT</h3><iframe src="{{event.problem_statement.url}}" height="1000" width="800"></iframe></div>>
   <br>
-  <div align="center" ><a href="#" class="button" style= "background-color: white;color: red;border: none;font-size: 20px;padding: 20px 34px;border-radius: 12px;"><h2>LINK TO THE TUTORIAL</h2></a></div>
+  <br>
+  <div align="center" ><a href="#" class="square_btn" >LINK TO THE TUTORIAL</a></div>
+  <br>
+  <br>
   <div align="center"><h3 style="text-shadow: 2px 2px 5px red">DEMO VIDEO</h3></div>
-  <div align="center"><video width="400" controls>
+  <div align="center"><video height="400" width="600" controls>
   <source src="{{event.video}}" type="video/mp4">
   </video></div>
   {%endif%}
   <br>
   <br>
-</body>
-</html>
-
+{% endblock %}

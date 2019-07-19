@@ -1,0 +1,92 @@
+{% extends 'erc/base_events_news.html' %}
+
+{% block title %}{{newsletter.title}}{% endblock %}
+
+
+{% block head %}
+<style>
+    /*--------------------------------------------------------------
+# Intro Section
+--------------------------------------------------------------*/
+#intros {
+  width: 100%;
+  background: linear-gradient(to top, rgba(46, 49, 65, 0), rgba(46, 49, 65, 0.5)),url('{{ MEDIA_URL }}{{ newsletter.image.url }}') center bottom no-repeat;
+  padding: auto;
+  padding-top: 25em;
+  height: 61em;
+}
+/*#intros .intros-img {
+  width: 50%;
+  float: right;
+}*/
+#intros .intros-info {
+  width: 100%;
+  text-align: center;
+}
+#intros .intros-info h2 {
+  color: #fff;
+  margin-bottom: 40px;
+  font-size: 48px;
+  font-weight: 700;
+}
+#intros .intros-info h2 span {
+  color: #74b5fc;
+  text-decoration: underline;
+}
+#intros .intros-info .btn-get-started,
+#intros .intros-info .btn-services {
+  font-family: "Montserrat", sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  display: inline-block;
+  padding: 10px 32px;
+  border-radius: 50px;
+  transition: 0.5s;
+  margin: 0 20px 20px 0;
+  color: #fff;
+}
+#intros .intros-info .btn-get-started {
+  background: #007bff;
+  border: 2px solid #007bff;
+  color: #fff;
+}
+#intros .intros-info .btn-get-started:hover {
+  background: none;
+  border-color: #fff;
+  color: #fff;
+}
+#intros .intros-info .btn-services {
+  border: 2px solid #fff;
+}
+#intros .intros-info .btn-services:hover {
+  background:  #007bff;
+  border-color: #007bff;
+  color: #fff;
+}
+</style>
+{% endblock %}
+
+
+{% block body %}
+ <!--==========================
+    Intro Section
+  ============================-->
+  <section id="intros" class="clearfix">
+    <div class="container">
+
+      <div class="intros-img">
+        <img src="img/intro-img.svg" alt="" class="img-fluid">
+      </div>
+
+      <div class="intros-info">
+        <h2 style="font-style: italic; font-weight: bold;">{{newsletter.title}}</h2>
+      </div>
+
+    </div>
+  </section><!-- #intro -->
+ <br>
+ <br>
+ <br>
+ <div align="center"><p>{{newsletter.content}}</p></div>
+{% endblock %}

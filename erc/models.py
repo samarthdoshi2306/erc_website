@@ -40,6 +40,11 @@ class BlogPart(models.Model):
 		max_length=100,
 		blank=True)
 
+class Newsletter(models.Model):
+	title=models.CharField(max_length=100)
+	image=models.ImageField(upload_to='media/newsletter')
+	content=models.TextField(blank=True)
+
 # class BlogPic(models.Model):
 # 	img=models.ImageField(upload_to='media/blogs',
 # 		height_field=None,

@@ -7,9 +7,16 @@ from django.db import connections
 def home_view (request, *args, **kwargs):
 	anirudh=Team.objects.get(id=2)
 	jian=Team.objects.get(id=3)
-	queryset=Team.objects.all()
+	team=Team.objects.all()
+	event=Event.objects.all()
 
-	return render(request,"erc/index.html",{'anirudh':anirudh,'jian':jian,'team':queryset })
+	content={
+	'anirudh':anirudh,
+	'jian':jian,
+	'team':team,
+	'events':event,
+	}
+	return render(request,"erc/index.html",content)
 
 def event_detail(request,Event_id):
 	try:

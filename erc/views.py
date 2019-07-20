@@ -28,7 +28,7 @@ def event_detail(request,Event_id):
 
 def blog_view(request, *args, **kwargs):
 	blog = BlogPart.objects.filter(
-		Blogtitle = 'Get Electrified 3').order_by('partNum').values_list('img')
+		Blogtitle = 'Basic Electronics').order_by('partNum').values_list('img')
 	images = list(blog)
 	img=[]
 	for image in images:
@@ -36,7 +36,9 @@ def blog_view(request, *args, **kwargs):
 	content={
 	'blog' :img,
 	}
-	return render(request,"erc/blog/test.html",content)
+	return render(request,"erc/blog/lf.html",content)
+
+
 
 def newsletter_detail(request,Newsletter_id):
 	try:

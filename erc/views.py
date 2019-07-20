@@ -33,7 +33,7 @@ def blog_view(request, *args, **kwargs):
 	content={
 	'blog' :img,
 	}
-	return render(request,"erc/blog/lf.html",content)
+	return render(request,"erc/blog/arduino.html",content)
 
 def reView(request,*args, **kwargs):
 	return render(request,'erc/reviews/testimonials.html')

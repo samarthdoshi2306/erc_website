@@ -26,19 +26,10 @@
   <link href="{% static 'erc/lib/ionicons/css/ionicons.min.css' %}" rel="stylesheet">
   <link href="{% static 'erc/lib/owlcarousel/assets/owl.carousel.min.css' %}" rel="stylesheet">
   <link href="{% static 'erc/lib/lightbox/css/lightbox.min.css' %}" rel="stylesheet">
-  <!-- <link href="{% static 'erc/css/main.css' %}" rel="stylesheet"> -->
+
   <!-- Main Stylesheet File -->
   <link href="{% static 'erc/css/style.css' %}" rel="stylesheet">
-  <link href="{% static 'erc/old_css/main.css' %}" rel="stylesheet">
 
-<!-- <link rel="stylesheet" href="https://grubdragon.github.io/erciitb/assets/css/main.css"> -->
-<!-- <link rel="stylesheet" href="https://grubdragon.github.io/erciitb/assets/css/team.css">
-<script src="https://use.edgefonts.net/source-sans-pro:n2,i2,n3,i3,n4,i4,n6,i6,n7,i7,n9,i9;source-code-pro:n4,n7;volkhov.js"></script>
-<link rel="canonical" href="https://grubdragon.github.io/erciitb/tutorials/LF">
-<link href="https://grubdragon.github.io/erciitb/feed.xml" type="application/atom+xml" rel="alternate" title="Electronics and Robotics Club, IIT Bombay Feed">
-<link href="https://fonts.googleapis.com/css?family=PT+Serif" rel="stylesheet"> 
-<link href="https://fonts.googleapis.com/css?family=EB+Garamond" rel="stylesheet"> 
- -->
   <!-- =======================================================
     Theme Name: NewBiz
     Theme URL: https://bootstrapmade.com/newbiz-bootstrap-business-template/
@@ -115,11 +106,9 @@
   </section><!-- #intro -->
 
   <main id="main">
-  <div class="blog-container" style="margin:0% 10% 0% 10% ">
-   {%block blog %}
-   {%endblock%}
-  </div>
 
+   {%block main_content%}
+   {%endblock%}
   <!--==========================
     Footer
   ============================-->
@@ -143,10 +132,6 @@
             
           </div>
 
-          <div class="col-lg-3 col-md-6 footer-links">
-            <img src="{%static 'erc/img/RepairBot.png' %}" alt="" class="img-fluid">
-          </div>
-
           <div class="col-lg-3 col-md-6 footer-contact">
             <h4>Contact Us</h4>
             <p>
@@ -166,6 +151,12 @@
             </div>
 
           </div>
+
+          <div class="col-lg-3 col-md-6 footer-links">
+            <img src="{%static 'erc/img/RepairBot.png' %}" alt="" class="img-fluid">
+          </div>
+
+          
 
           <div class="col-lg-3 col-md-6 footer-newsletter">
             <h4>Our Newsletter</h4>
@@ -216,8 +207,6 @@
 
   <!-- Template Main Javascript File -->
   <script src="{% static 'erc/js/main.js'  %}"></script>
- <!-- MathJax -->
-  <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
 
 </body>
 </html>

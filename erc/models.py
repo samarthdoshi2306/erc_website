@@ -31,7 +31,7 @@ class Blog(models.Model):
 	title=models.CharField(max_length=80)
 	parts=models.IntegerField()
 	author=models.CharField(max_length=80)
-	date=models.DateTimeField()
+	date=models.DateField()
 
 class BlogPart(models.Model):
 	Blogtitle=models.CharField(max_length=80,null=False)
@@ -57,3 +57,9 @@ class Newsletter(models.Model):
 # 		max_length=100)
 # 	BlogTitle=models.CharField(max_length=80,null=False)
 # 	BlogPartNum=models.DecimalField(decimal_places=2,max_digits=2,null=False,default=False)
+
+class News(models.Model):
+	image=models.ImageField(upload_to='media/news')
+	date=models.DateField()
+	pdf=models.FileField()
+	headline=models.CharField(max_length=80)

@@ -1,0 +1,50 @@
+{% extends 'erc/base_events_news.html' %}
+
+{% block title %}Headlines{% endblock %}
+
+
+{% block head %}
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+<style>
+    .iframe-container {
+    padding-bottom: 60%;
+    padding-top: 30px; height: 0; overflow: hidden;
+}
+
+.iframe-container iframe,
+.iframe-container object,
+.iframe-container embed {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+</style>
+
+{% endblock %}
+
+
+{% block body %}
+
+<br>
+<br>
+<br>
+<br>
+{%for newss in news %}
+<div align="center"><h1>{{newss.headline}}-{{newss.date}}</h1><div>
+    <div align="center"><img src="{{newss.image.url}}"/><div>
+        <br>
+<div  class="container">
+    <div >
+        <div align="center"> <a class="btn btn-primary view-pdf" href="{{newss.pdf.url}}">Click here for Newsletter</a></div>
+	</div>
+</div>
+
+
+
+      <hr width="50%" >
+{% endfor %}
+
+{% endblock %}

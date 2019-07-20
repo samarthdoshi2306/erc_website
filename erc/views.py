@@ -47,4 +47,8 @@ def newsletter_detail(request,Newsletter_id):
 	except Newsletter.DoesNotExist:
 		raise Http404("Newsletter Does Not Exist")
 	return render(request,'erc/newsletter_detail.html',{'newsletter':newsletter})
+
+def news(request):
+	news=News.objects.all()
+	return render(request,'erc/news.html',{'news':news})
 	

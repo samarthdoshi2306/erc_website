@@ -1,117 +1,431 @@
 <!DOCTYPE html>
-<html lang="en">
+</html lang="en">
 <head>
 {% load static %}
-	<meta charset="utf-8">
-	<title>{{event.name}}</title>
-	<meta content="width=device-width, initial-scale=1.0" name="viewport">
-	<meta content="" name="keywords">
-	<meta content="A place for tinkerers and the sort!" name="description">
-	<meta name="twitter:description" content="A place for tinkerers and the sort!">
-	<meta name="twitter:card" content="summary">
+  <meta charset="utf-8">
+  <title>Electronics and Robotics Club</title>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <meta content="" name="keywords">
+  <meta content="A place for tinkerers and the sort!" name="description">
+  <meta name="twitter:description" content="A place for tinkerers and the sort!">
+  <meta name="twitter:card" content="summary">
 
-	<!-- Favicons -->
-	<link href="{% static 'erc/img/favicon.ico' %}" rel="icon">
-	<link href="{% static 'erc/img/apple-touch-icon.png' %}" rel="apple-touch-icon">
+  <!-- Favicons -->
+  <link href="{% static 'erc/img/favicon.ico' %}" rel="icon">
+  <link href="{% static 'erc/img/apple-touch-icon.png' %}" rel="apple-touch-icon">
 
-	<!-- Google Fonts -->
-	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Montserrat:300,400,500,700" rel="stylesheet">
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Montserrat:300,400,500,700" rel="stylesheet">
 
-	<!-- Bootstrap CSS File -->
-	<link href="{% static 'erc/lib/bootstrap/css/bootstrap.min.css' %}"rel="stylesheet">
+  <!-- Bootstrap CSS File -->
+  <link href="{% static 'erc/lib/bootstrap/css/bootstrap.min.css' %}"rel="stylesheet">
 
-	<!-- Libraries CSS Files -->
-	<link href="{% static 'erc/lib/font-awesome/css/font-awesome.min.css' %}" rel="stylesheet">
-	<link href="{% static 'erc/lib/animate/animate.min.css' %}" rel="stylesheet">
-	<link href="{% static 'erc/lib/ionicons/css/ionicons.min.css' %}" rel="stylesheet">
-	<link href="{% static 'erc/lib/owlcarousel/assets/owl.carousel.min.css' %}" rel="stylesheet">
-	<link href="{% static 'erc/lib/lightbox/css/lightbox.min.css' %}" rel="stylesheet">
+  <!-- Libraries CSS Files -->
+  <link href="{% static 'erc/lib/font-awesome/css/font-awesome.min.css' %}" rel="stylesheet">
+  <link href="{% static 'erc/lib/animate/animate.min.css' %}" rel="stylesheet">
+  <link href="{% static 'erc/lib/ionicons/css/ionicons.min.css' %}" rel="stylesheet">
+  <link href="{% static 'erc/lib/owlcarousel/assets/owl.carousel.min.css' %}" rel="stylesheet">
+  <link href="{% static 'erc/lib/lightbox/css/lightbox.min.css' %}" rel="stylesheet">
+  <!-- <link href="{% static 'erc/css/main.css' %}" rel="stylesheet"> -->
+  <!-- Main Stylesheet File -->
+  <link href="{% static 'erc/css/style.css' %}" rel="stylesheet">
+  <link href="{% static 'erc/old_css/main.css' %}" rel="stylesheet">
 
-	<!-- old-css files	 -->
-	<link href="{% static 'erc/css/syntax.css' %}" rel="stylesheet">
-	<link href="{% static 'erc/css/team.css' %}" rel="stylesheet">
-	<link href="{% static 'erc/css/main.css' %}" rel="stylesheet">
-	<link href="{% static 'erc/css/clean-blog.css' %}" rel="stylesheet">
-	<link href="{% static 'erc/css/bootstrap.css' %}" rel="Stylesheett">
-	<link href="{% static 'erc/css/clean-blog.less' %}" rel="stylesheet">
-	<link href="{% static 'erc/css/.css' %}" rel="stylesheet">
-	<link href="{% static 'erc/css/bootstrap.min.css' %}" rel="stylesheet">
+<!-- <link rel="stylesheet" href="https://grubdragon.github.io/erciitb/assets/css/main.css"> -->
+<!-- <link rel="stylesheet" href="https://grubdragon.github.io/erciitb/assets/css/team.css">
+<script src="https://use.edgefonts.net/source-sans-pro:n2,i2,n3,i3,n4,i4,n6,i6,n7,i7,n9,i9;source-code-pro:n4,n7;volkhov.js"></script>
+<link rel="canonical" href="https://grubdragon.github.io/erciitb/tutorials/LF">
+<link href="https://grubdragon.github.io/erciitb/feed.xml" type="application/atom+xml" rel="alternate" title="Electronics and Robotics Club, IIT Bombay Feed">
+<link href="https://fonts.googleapis.com/css?family=PT+Serif" rel="stylesheet"> 
+<link href="https://fonts.googleapis.com/css?family=EB+Garamond" rel="stylesheet"> 
+ -->
+  <!-- =======================================================
+    Theme Name: NewBiz
+    Theme URL: https://bootstrapmade.com/newbiz-bootstrap-business-template/
+    Author: BootstrapMade.com
+    License: https://bootstrapmade.com/license/
+  ======================================================= -->
+</head>
 
-	<!-- Main Stylesheet File -->
-	<link href="{% static 'erc/css/style.css' %}" rel="stylesheet">
-
-
-	<!-- =======================================================
-		Theme Name: NewBiz
-		Theme URL: https://bootstrapmade.com/newbiz-bootstrap-business-template/
-		Author: BootstrapMade.com
-		License: https://bootstrapmade.com/license/
-	======================================================= -->
 <body>
-	<!--==========================
-	Header
-	============================-->
-	<header id="header" class="fixed-top" style="background-color: white; opacity: 0.95;">
-		<div class="container">
 
-			<div class="logo float-left">
-				<!-- Uncomment below if you prefer to use an image logo -->
-				<!-- <h1 class="text-light"><a href="#header"><span>NewBiz</span></a></h1> -->
-				<a href="#intro" class="scrollto"><img src="img/logo.png" alt="" class="img-fluid"></a>
-			</div>
+ <!--==========================
+  Header
+  ============================-->
+  <header id="header" class="fixed-top" style="/*background-color: red;*/   
+  ">
+    <div class="container">
 
-			<nav class="main-nav float-right d-none d-lg-block">
-				<ul>
-					<li class="active" style="color:red;"><a href="#intro">Home</a></li>
-					<li><a href="#about">About Us</a></li>
-					<li><a href="#services">Services</a></li>
-					<li><a href="#portfolio">Portfolio</a></li>
-					<li><a href="#team">Team</a></li>
-					<li class="drop-down"><a href="">Drop Down</a>
-						<ul>
-							<li><a href="#">Drop Down 1</a></li>
-							<li class="drop-down"><a href="#">Drop Down 2</a>
-								<ul>
-									<li><a href="#">Deep Drop Down 1</a></li>
-									<li><a href="#">Deep Drop Down 2</a></li>
-									<li><a href="#">Deep Drop Down 3</a></li>
-									<li><a href="#">Deep Drop Down 4</a></li>
-									<li><a href="#">Deep Drop Down 5</a></li>
-								</ul>
-							</li>
-							<li><a href="#">Drop Down 3</a></li>
-							<li><a href="#">Drop Down 4</a></li>
-							<li><a href="#">Drop Down 5</a></li>
-						</ul>
-					</li>
-					<li><a href="#contact">Contact Us</a></li>
-				</ul>
-			</nav><!-- .main-nav -->
+      <div class="logo float-left">
+        <!-- Uncomment below if you prefer to use an image logo -->
+         <!--h1 class="text-light"><a href="#header"><span>ERC</span></a></h1--> 
+        <a href="#intro" class="scrollto"><img src="{%static 'erc/img/favicon.ico' %}" alt="" class="img-fluid"><span>&#xA0;Electronics n Robotics Club</span></a>
+      </div>
 
-		</div>
-	</header><!-- #header -->
-	<!--==========================
-		Intro Section
-	============================-->
-	<section id="intro" class="clearfix">
-		<div class="container">
+      <nav class="main-nav float-right d-none d-lg-block">
+        <ul>
+          <li class="active"><a href="#intro">Home</a></li>
+          <li><a href="#about">About Us</a></li>
+          <li><a href="#testimonials">Newsletter</a></li>
+          <li><a href="#portfolio">Events</a></li>
+          <li><a href="#team">Team</a></li>
+          <!--li class="drop-down"><a href="">Drop Down</a>
+            <ul>
+              <li><a href="#">Drop Down 1</a></li>
+              <li class="drop-down"><a href="#">Drop Down 2</a>
+                <ul>
+                  <li><a href="#">Deep Drop Down 1</a></li>
+                  <li><a href="#">Deep Drop Down 2</a></li>
+                  <li><a href="#">Deep Drop Down 3</a></li>
+                  <li><a href="#">Deep Drop Down 4</a></li>
+                  <li><a href="#">Deep Drop Down 5</a></li>
+                </ul>
+              </li>
+              <li><a href="#">Drop Down 3</a></li>
+              <li><a href="#">Drop Down 4</a></li>
+              <li><a href="#">Drop Down 5</a></li>
+            </ul>
+          </li-->
+          <li><a href="#contact">Contact Us</a></li>
+        </ul>
+      </nav><!-- .main-nav -->
+      
+    </div>
+  </header><!-- #header -->
 
-			<div class="intro-img">
-				<img src="img/intro-img.svg" alt="" class="img-fluid">
-			</div>
+  <!--==========================
+    Intro Section
+  ============================-->
+  <section id="intro" class="clearfix">
+    <div class="container">
 
-			<div class="intro-info">
-				<h2 style="font-style: italic; font-weight: bold;">Electronics and <br>Robotics club<br>IIT Bombay</h2>
-				<div>
-					<a href="#about" class="btn-get-started scrollto">About Us</a>
-					<a href="#portfolio" class="btn-services scrollto">Our Events</a>
-				</div>
-			</div>
+      <div class="intro-img">
+        <img src="img/intro-img.svg" alt="" class="img-fluid">
+      </div>
 
-		</div>
-	</section>
-{% block blog %}
-block
-{% endblock %}
+      <div class="intro-info">
+        <h2 style="font-style: italic; font-weight: bold;">Electronics and <br>Robotics club<br>IIT Bombay</h2>
+        <div>
+          <a href="#about" class="btn-get-started scrollto">About Us </a>
+          <a href="#portfolio" class="btn-services scrollto">Our Events</a>
+        </div>
+      </div>
+
+    </div>
+  </section><!-- #intro -->
+
+  <main id="main">
+  <div class="blog-container" style="margin:0% 10% 0% 10% ">
+   {%block blog %}
+   {%endblock%}
+  </div>
+
+  <!--==========================
+    Footer
+  ============================-->
+  <footer id="footer">
+    <div class="footer-top">
+      <div class="container">
+        <div class="row">
+
+          <div class="col-lg-3 col-md-6 footer-links">
+            <h5><a href="#intro" class="scrollto"><img src="{%static 'erc/img/favicon.ico' %}" alt="" class="img-fluid"></a>
+              ERC
+            </h5>
+            <h4>Useful Links</h4>
+            <ul>
+              <li><a href="#">Home</a></li>
+              <li><a href="#">About us</a></li>
+              <li><a href="#">Services</a></li>
+              <!--li><a href="#">Terms of service</a></li-->
+              <!--li><a href="#">Privacy policy</a></li-->
+            </ul>
+            
+          </div>
+
+          <div class="col-lg-3 col-md-6 footer-links">
+            <img src="{%static 'erc/img/RepairBot.png' %}" alt="" class="img-fluid">
+          </div>
+
+          <div class="col-lg-3 col-md-6 footer-contact">
+            <h4>Contact Us</h4>
+            <p>
+              A108 Adam Street <br>
+              New York, NY 535022<br>
+              United States <br>
+              <strong>Phone:</strong> +1 5589 55488 55<br>
+              <strong>Email:</strong> info@example.com<br>
+            </p>
+
+            <div class="social-links">
+              <a href="#" class="twitter"><i class="fa fa-twitter"></i></a>
+              <a href="#" class="facebook"><i class="fa fa-facebook"></i></a>
+              <a href="#" class="instagram"><i class="fa fa-instagram"></i></a>
+              <a href="#" class="google-plus"><i class="fa fa-google-plus"></i></a>
+              <a href="#" class="linkedin"><i class="fa fa-linkedin"></i></a>
+            </div>
+
+          </div>
+
+          <div class="col-lg-3 col-md-6 footer-newsletter">
+            <h4>Our Newsletter</h4>
+            <p>Subscribe to our newsletter and to the path of being a tech guru!</p>
+            <form action="" method="post">
+              <input type="email" name="email"><input type="submit"  value="Subscribe">
+            </form>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <!--div class="container">
+      <div class="copyright">
+        &copy; Copyright <strong>NewBiz</strong>. All Rights Reserved
+      </div>
+      <div class="credits">
+        <
+          All the links in the footer should remain intact.
+          You can delete the links only if you purchased the pro version.
+          Licensing information: https://bootstrapmade.com/license/
+          Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/buy/?theme=NewBiz
+        >
+        Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+      </div-->
+    </div>
+  </footer><!-- #footer -->
+
+  <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
+  <!-- Uncomment below i you want to use a preloader -->
+   <div id="preloader"></div> 
+
+  <!-- JavaScript Libraries -->
+  <script src="{% static 'erc/lib/jquery/jquery.min.js'  %}"></script>
+  <script src="{% static 'erc/lib/jquery/jquery-migrate.min.js'  %}"></script>
+  <script src="{% static 'erc/lib/bootstrap/js/bootstrap.bundle.min.js'  %}"></script>
+  <script src="{% static 'erc/lib/easing/easing.min.js'  %}"></script>
+  <script src="{% static 'erc/lib/mobile-nav/mobile-nav.js'  %}"></script>
+  <script src="{% static 'erc/lib/wow/wow.min.js'  %}"></script>
+  <script src="{% static 'erc/lib/waypoints/waypoints.min.js'  %}"></script>
+  <script src="{% static 'erc/lib/counterup/counterup.min.js'  %}"></script>
+  <script src="{% static 'erc/lib/owlcarousel/owl.carousel.min.js'  %}"></script>
+  <script src="{% static 'erc/lib/isotope/isotope.pkgd.min.js'  %}"></script>
+  <script src="{% static 'erc/lib/lightbox/js/lightbox.min.js'  %}"></script>
+  <!-- Contact Form JavaScript File -->
+  <script src="{% static 'erc/contactform/contactform.js'  %}"></script>
+
+  <!-- Template Main Javascript File -->
+  <script src="{% static 'erc/js/main.js'  %}"></script>
+ <!-- MathJax -->
+  <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
 
 </body>
+</html>
+
+
+<!--==========================
+      Services Section
+    ============================-->
+    <!--section id="services" class="section-bg">
+      <div class="container">
+
+        <header class="section-header">
+          <h3>Services</h3>
+          <p>Laudem latine persequeris id sed, ex fabulas delectus quo. No vel partiendo abhorreant vituperatoribus.</p>
+        </header>
+
+        <div class="row">
+
+          <div class="col-md-6 col-lg-5 offset-lg-1 wow bounceInUp" data-wow-duration="1.4s">
+            <div class="box">
+              <div class="icon"><i class="ion-ios-analytics-outline" style="color: #ff689b;"></i></div>
+              <h4 class="title"><a href="">Lorem Ipsum</a></h4>
+              <p class="description">Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident</p>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-5 wow bounceInUp" data-wow-duration="1.4s">
+            <div class="box">
+              <div class="icon"><i class="ion-ios-bookmarks-outline" style="color: #e9bf06;"></i></div>
+              <h4 class="title"><a href="">Dolor Sitema</a></h4>
+              <p class="description">Minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat tarad limino ata</p>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-5 offset-lg-1 wow bounceInUp" data-wow-delay="0.1s" data-wow-duration="1.4s">
+            <div class="box">
+              <div class="icon"><i class="ion-ios-paper-outline" style="color: #3fcdc7;"></i></div>
+              <h4 class="title"><a href="">Sed ut perspiciatis</a></h4>
+              <p class="description">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur</p>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-5 wow bounceInUp" data-wow-delay="0.1s" data-wow-duration="1.4s">
+            <div class="box">
+              <div class="icon"><i class="ion-ios-speedometer-outline" style="color:#41cf2e;"></i></div>
+              <h4 class="title"><a href="">Magni Dolores</a></h4>
+              <p class="description">Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-5 offset-lg-1 wow bounceInUp" data-wow-delay="0.2s" data-wow-duration="1.4s">
+            <div class="box">
+              <div class="icon"><i class="ion-ios-world-outline" style="color: #d6ff22;"></i></div>
+              <h4 class="title"><a href="">Nemo Enim</a></h4>
+              <p class="description">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque</p>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-5 wow bounceInUp" data-wow-delay="0.2s" data-wow-duration="1.4s">
+            <div class="box">
+              <div class="icon"><i class="ion-ios-clock-outline" style="color: #4680ff;"></i></div>
+              <h4 class="title"><a href="">Eiusmod Tempor</a></h4>
+              <p class="description">Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi</p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section--><!-- #services -->
+
+    <!--==========================
+      Why Us Section
+    ============================-->
+    <!--section id="why-us" class="wow fadeIn">
+      <div class="container">
+        <header class="section-header">
+          <h3>Why choose us?</h3>
+          <p>Laudem latine persequeris id sed, ex fabulas delectus quo. No vel partiendo abhorreant vituperatoribus.</p>
+        </header>
+
+        <div class="row row-eq-height justify-content-center">
+
+          <div class="col-lg-4 mb-4">
+            <div class="card wow bounceInUp">
+                <i class="fa fa-diamond"></i>
+              <div class="card-body">
+                <h5 class="card-title">Corporis dolorem</h5>
+                <p class="card-text">Deleniti optio et nisi dolorem debitis. Aliquam nobis est temporibus sunt ab inventore officiis aut voluptatibus.</p>
+                <a href="#" class="readmore">Read more </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 mb-4">
+            <div class="card wow bounceInUp">
+                <i class="fa fa-language"></i>
+              <div class="card-body">
+                <h5 class="card-title">Voluptates dolores</h5>
+                <p class="card-text">Voluptates nihil et quis omnis et eaque omnis sint aut. Ducimus dolorum aspernatur.</p>
+                <a href="#" class="readmore">Read more </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 mb-4">
+            <div class="card wow bounceInUp">
+                <i class="fa fa-object-group"></i>
+              <div class="card-body">
+                <h5 class="card-title">Eum ut aspernatur</h5>
+                <p class="card-text">Autem quod nesciunt eos ea aut amet laboriosam ab. Eos quis porro in non nemo ex. </p>
+                <a href="#" class="readmore">Read more </a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="row counters">
+
+          <div class="col-lg-3 col-6 text-center">
+            <span data-toggle="counter-up">274</span>
+            <p>Clients</p>
+          </div>
+
+          <div class="col-lg-3 col-6 text-center">
+            <span data-toggle="counter-up">421</span>
+            <p>Projects</p>
+          </div>
+
+          <div class="col-lg-3 col-6 text-center">
+            <span data-toggle="counter-up">1,364</span>
+            <p>Hours Of Support</p>
+          </div>
+
+          <div class="col-lg-3 col-6 text-center">
+            <span data-toggle="counter-up">18</span>
+            <p>Hard Workers</p>
+          </div>
+  
+        </div>
+
+      </div>
+    </section-->
+
+
+
+     <!--==========================
+      Clients Section
+    ============================-->
+    <!--section id="clients" class="section-bg">
+
+      <div class="container">
+
+        <div class="section-header">
+          <h3>Our CLients</h3>
+          <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque dere santome nida.</p>
+        </div>
+
+        <div class="row no-gutters clients-wrap clearfix wow fadeInUp">
+
+          <div class="col-lg-3 col-md-4 col-xs-6">
+            <div class="client-logo">
+              <img src="img/clients/client-1.png" class="img-fluid" alt="">
+            </div>
+          </div>
+          
+          <div class="col-lg-3 col-md-4 col-xs-6">
+            <div class="client-logo">
+              <img src="img/clients/client-2.png" class="img-fluid" alt="">
+            </div>
+          </div>
+        
+          <div class="col-lg-3 col-md-4 col-xs-6">
+            <div class="client-logo">
+              <img src="img/clients/client-3.png" class="img-fluid" alt="">
+            </div>
+          </div>
+          
+          <div class="col-lg-3 col-md-4 col-xs-6">
+            <div class="client-logo">
+              <img src="img/clients/client-4.png" class="img-fluid" alt="">
+            </div>
+          </div>
+          
+          <div class="col-lg-3 col-md-4 col-xs-6">
+            <div class="client-logo">
+              <img src="img/clients/client-5.png" class="img-fluid" alt="">
+            </div>
+          </div>
+        
+          <div class="col-lg-3 col-md-4 col-xs-6">
+            <div class="client-logo">
+              <img src="img/clients/client-6.png" class="img-fluid" alt="">
+            </div>
+          </div>
+          
+          <div class="col-lg-3 col-md-4 col-xs-6">
+            <div class="client-logo">
+              <img src="img/clients/client-7.png" class="img-fluid" alt="">
+            </div>
+          </div>
+          
+          <div class="col-lg-3 col-md-4 col-xs-6">
+            <div class="client-logo">
+              <img src="img/clients/client-8.png" class="img-fluid" alt="">
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </section-->

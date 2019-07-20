@@ -253,9 +253,8 @@
               <img src="{{event.img.url}}" class="img-fluid" alt="">
               <div class="portfolio-info">
                 <h4><a href="{{event.get_absolute_url}}">{{event.name}}</a></h4>
-                
                 <div>
-                  <a href="{{event.get_absolute_url}}" class="link-preview" data-lightbox="portfolio" data-title="Web" title="Preview"><i class="ion ion-eye"></i></a>
+                  <a href="{{event.img.url}}" class="link-preview" data-lightbox="portfolio" data-title="Web" title="Preview"><i class="ion ion-eye"></i></a>
                   <a href="{{event.get_absolute_url}}" class="link-details" title="More Details"><i class="ion ion-android-open"></i></a>
                 </div>
               </div>
@@ -398,8 +397,6 @@
         </div>
     </div>
     </section>
-
-   
 
     <!--==========================
       Contact Section

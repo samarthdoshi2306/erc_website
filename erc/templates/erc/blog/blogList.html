@@ -1,0 +1,7 @@
+<!DOCTYPE html>
+<h1>LOL</h1>
+<ul>
+{%for blog in blogs%}
+	<li><a href="{{blog.get_absolute_url}}">{{blog.title}}</a></li>
+{%endfor%}
+</ul>

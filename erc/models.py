@@ -32,6 +32,8 @@ class Blog(models.Model):
 	parts=models.IntegerField()
 	author=models.CharField(max_length=80)
 	date=models.DateTimeField()
+	def get_absolute_url(self):
+		return reverse('erc:blog',kwargs={'name':self.title})
 
 class BlogPart(models.Model):
 	Blogtitle=models.CharField(max_length=80,null=False)

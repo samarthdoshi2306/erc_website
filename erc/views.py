@@ -23,9 +23,20 @@ def event_detail(request,Event_id):
 		raise Http404("Event Does Not Exist")
 	return render(request,'erc/event_detail.html',{'event':event})
 
-def blog_view(request, *args, **kwargs):
-	blog = BlogPart.objects.filter(
-		Blogtitle = 'Basic Electronics').order_by('partNum').values_list('img')
+def blogList(request,*args,**kwargs):
+	queryset=Blog.objects.all()
+	content={
+	'blogs':queryset
+	}
+	return render(request,'erc/blog/Bloglist.html',content)
+
+def blog_view(request,name, *args, **kwargs):
+	try:
+		blog = BlogPart.objects.filter(
+		Blogtitle = '{}'.format(name)).order_by('partNum').values_list('img')
+	except Exception as e:
+		return Http404("Sorry, we couldn't find what you're looking for :(")
+
 	images = list(blog)
 	img=[]
 	for image in images:
@@ -33,7 +44,8 @@ def blog_view(request, *args, **kwargs):
 	content={
 	'blog' :img,
 	}
-	return render(request,"erc/blog/arduino.html",content)
+	#search for the html file named 'name'
+	return render(request,"erc/blog/{}".format(name),content)
 
 def reView(request,*args, **kwargs):
 	return render(request,'erc/reviews/testimonials.html')

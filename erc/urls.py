@@ -13,7 +13,9 @@ urlpatterns = [
     #events page
     path('events/<int:Event_id>/',event_detail, name='event_detail'),
     #blogs page
-    path('blog',blog_view, name='blogs'),
+    path('blog/<name>',blog_view, name='blog'),
+    #blog list
+    path('blog',blogList,name='blogList'),
     #newsletter page
     path('newsletter/<int:Newsletter_id>/', newsletter_detail, name='newsletter_detail')
 

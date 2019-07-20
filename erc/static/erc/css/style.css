@@ -1064,8 +1064,8 @@ h6 {
 --------------------------------*/
 
 #contact {
-  box-shadow: 0px 0px 12px 0px rgba(0, 0, 0, 0.1);
-  background: rgba(254,216,177,0.5);
+  box-shadow: 0px 0px 12px 0px rgba(0, 0, 0, 0);
+  background: rgba(254,216,177,0.7);
   padding: 60px 0;
   overflow: hidden;
 }

@@ -5,7 +5,8 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/erc/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/erc/admin.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/erc/templates/erc/event_detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/erc/templates/erc/event_detail.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/erc/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/erc/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/erc/static/erc/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/erc/static/erc/js/main.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/erc/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/erc/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/erc/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/erc/views.py" afterDir="false" />
     </list>
@@ -19,25 +20,25 @@
     <favorites_list name="erc_website" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/erc/static/erc/css/style.css">
+        <entry file="file://$PROJECT_DIR$/erc/admin.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="372">
-              <caret line="240" column="1" selection-start-line="240" selection-start-column="1" selection-end-line="240" selection-end-column="1" />
+            <state relative-caret-position="170">
+              <caret line="10" column="24" selection-start-line="10" selection-start-column="24" selection-end-line="10" selection-end-column="24" />
+              <folding>
+                <element signature="e#0#32#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/erc/templates/erc/newsletter_detail.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="529">
-              <caret line="257" column="56" selection-start-line="257" selection-start-column="56" selection-end-line="257" selection-end-column="56" />
+            <state relative-caret-position="187">
+              <caret line="11" column="14" selection-end-line="91" selection-end-column="14" />
               <folding>
-                <element signature="n#style#0;n#header#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#li#0;n#ul#0;n#nav#0;n#div#0;n#header#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#h2#0;n#div#1;n#div#0;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#h2#0;n#div#1;n#div#0;n#section#0;n#!!top" expanded="true" />
               </folding>
             </state>
@@ -47,25 +48,17 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/erc/templates/erc/base_events_news.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="5" column="23" selection-start-line="5" selection-start-column="23" selection-end-line="5" selection-end-column="23" />
+            <state relative-caret-position="274">
+              <caret line="41" column="5" selection-start-line="41" selection-start-column="5" selection-end-line="41" selection-end-column="5" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/erc/templates/erc/event_detail.html">
+        <entry file="file://$PROJECT_DIR$/erc/static/erc/js/main.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="529">
-              <caret line="76" column="14" lean-forward="true" selection-end-line="76" selection-end-column="14" />
-              <folding>
-                <element signature="e#6803#6849#0" expanded="true" />
-                <element signature="e#7085#7110#0" expanded="true" />
-                <element signature="e#7194#7212#0" expanded="true" />
-                <element signature="e#7343#7388#0" expanded="true" />
-                <element signature="e#7786#7822#0" expanded="true" />
-                <element signature="e#8074#8110#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="406">
+              <caret line="136" column="25" selection-start-line="136" selection-start-column="25" selection-end-line="136" selection-end-column="25" />
             </state>
           </provider>
         </entry>
@@ -73,28 +66,26 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/erc/templates/erc/base.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-7153">
-              <caret line="133" lean-forward="true" selection-start-line="133" selection-end-line="133" />
-              <folding>
-                <element signature="n#style#0;n#h2#0;n#div#1;n#div#0;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-              </folding>
+            <state relative-caret-position="5123">
+              <caret line="370" column="18" lean-forward="true" selection-start-line="370" selection-start-column="18" selection-end-line="370" selection-end-column="18" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/erc/templates/erc/index.html">
-          <provider selected="true" editor-type-id="text-editor" />
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="540">
+              <caret line="139" lean-forward="true" selection-start-line="139" selection-end-line="139" />
+            </state>
+          </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/erc/admin.py">
+        <entry file="file://$PROJECT_DIR$/erc/models.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="9" column="30" selection-start-line="9" selection-start-column="30" selection-end-line="9" selection-end-column="30" />
-              <folding>
-                <element signature="e#0#32#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="527">
+              <caret line="63" column="20" selection-start-line="63" selection-start-column="20" selection-end-line="63" selection-end-column="20" />
             </state>
           </provider>
         </entry>
@@ -102,8 +93,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/erc/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="529">
-              <caret line="45" column="81" selection-start-line="45" selection-start-column="81" selection-end-line="45" selection-end-column="81" />
+            <state relative-caret-position="461">
+              <caret line="51" column="27" selection-start-line="51" selection-start-column="27" selection-end-line="51" selection-end-column="27" />
               <folding>
                 <element signature="e#0#31#0" expanded="true" />
               </folding>
@@ -112,10 +103,22 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/erc/urls.py">
+        <entry file="file://$PROJECT_DIR$/erc/templates/erc/event_detail.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="34">
-              <caret line="2" column="69" selection-start-line="2" selection-start-column="69" selection-end-line="2" selection-end-column="69" />
+            <state relative-caret-position="308">
+              <caret line="63" column="166" lean-forward="true" selection-start-line="63" selection-start-column="85" selection-end-line="63" selection-end-column="166" />
+              <folding>
+                <element signature="e#1928#1964#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/erc/templates/erc/news.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="390">
+              <caret line="35" column="26" selection-start-line="35" selection-start-column="26" selection-end-line="35" selection-end-column="26" />
             </state>
           </provider>
         </entry>
@@ -137,16 +140,18 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/erc_website/settings.py" />
-        <option value="$PROJECT_DIR$/erc/models.py" />
         <option value="$PROJECT_DIR$/erc/templates/erc/detail.html" />
         <option value="$PROJECT_DIR$/erc/templates/erc/base.html" />
         <option value="$PROJECT_DIR$/erc_website/urls.py" />
-        <option value="$PROJECT_DIR$/erc/admin.py" />
-        <option value="$PROJECT_DIR$/erc/views.py" />
-        <option value="$PROJECT_DIR$/erc/urls.py" />
-        <option value="$PROJECT_DIR$/erc/templates/erc/base_events_news.html" />
         <option value="$PROJECT_DIR$/erc/templates/erc/event_detail.html" />
         <option value="$PROJECT_DIR$/erc/templates/erc/newsletter_detail.html" />
+        <option value="$PROJECT_DIR$/erc/admin.py" />
+        <option value="$PROJECT_DIR$/erc/urls.py" />
+        <option value="$PROJECT_DIR$/erc/views.py" />
+        <option value="$PROJECT_DIR$/erc/models.py" />
+        <option value="$PROJECT_DIR$/erc/templates/erc/base_events_news.html" />
+        <option value="$PROJECT_DIR$/erc/static/erc/js/main.js" />
+        <option value="$PROJECT_DIR$/erc/templates/erc/news.html" />
       </list>
     </option>
   </component>
@@ -192,6 +197,14 @@
               <item name="static" type="462c0819:PsiDirectoryNode" />
               <item name="erc" type="462c0819:PsiDirectoryNode" />
               <item name="img" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="erc_website" type="b2602c69:ProjectViewProjectNode" />
+              <item name="erc_website" type="462c0819:PsiDirectoryNode" />
+              <item name="erc" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+              <item name="erc" type="462c0819:PsiDirectoryNode" />
+              <item name="js" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="erc_website" type="b2602c69:ProjectViewProjectNode" />
@@ -257,7 +270,7 @@
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49918166" visible="true" weight="0.24479167" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49918166" visible="true" weight="0.24107143" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" sideWeight="0.5008183" side_tool="true" weight="0.24479167" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -322,18 +335,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/erc/media/get_mechanised.jpg" />
     <entry file="file://$PROJECT_DIR$/erc/media/blah.jpg" />
-    <entry file="file://$PROJECT_DIR$/erc/static/erc/js/main.js">
+    <entry file="file://$PROJECT_DIR$/erc/templates/erc/detail.html" />
+    <entry file="file://$PROJECT_DIR$/erc_website/settings.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="25" column="33" selection-start-line="25" selection-start-column="33" selection-end-line="25" selection-end-column="33" />
+        <state relative-caret-position="529">
+          <caret line="121" selection-start-line="121" selection-end-line="121" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/erc/templates/erc/detail.html" />
-    <entry file="file://$PROJECT_DIR$/erc/models.py">
+    <entry file="file://$PROJECT_DIR$/erc/static/erc/css/style.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="393">
-          <caret line="42" column="23" lean-forward="true" selection-start-line="42" selection-start-column="23" selection-end-line="42" selection-end-column="23" />
+        <state relative-caret-position="372">
+          <caret line="240" column="1" selection-start-line="240" selection-start-column="1" selection-end-line="240" selection-end-column="1" />
         </state>
       </provider>
     </entry>
@@ -347,92 +360,95 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/erc_website/settings.py">
+    <entry file="file://$PROJECT_DIR$/erc/urls.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="529">
-          <caret line="121" selection-start-line="121" selection-end-line="121" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/erc/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="529">
-          <caret line="45" column="81" selection-start-line="45" selection-start-column="81" selection-end-line="45" selection-end-column="81" />
-          <folding>
-            <element signature="e#0#31#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/erc/admin.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="30" selection-start-line="9" selection-start-column="30" selection-end-line="9" selection-end-column="30" />
+        <state relative-caret-position="136">
+          <caret line="8" column="14" selection-start-line="8" selection-start-column="14" selection-end-line="8" selection-end-column="14" />
           <folding>
             <element signature="e#0#32#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/erc/urls.py">
+    <entry file="file://$PROJECT_DIR$/erc/admin.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="69" selection-start-line="2" selection-start-column="69" selection-end-line="2" selection-end-column="69" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/erc/static/erc/css/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="372">
-          <caret line="240" column="1" selection-start-line="240" selection-start-column="1" selection-end-line="240" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/erc/templates/erc/base.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-7153">
-          <caret line="133" lean-forward="true" selection-start-line="133" selection-end-line="133" />
+        <state relative-caret-position="170">
+          <caret line="10" column="24" selection-start-line="10" selection-start-column="24" selection-end-line="10" selection-end-column="24" />
           <folding>
-            <element signature="n#style#0;n#h2#0;n#div#1;n#div#0;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/erc/templates/erc/index.html">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/erc/templates/erc/base_events_news.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="23" selection-start-line="5" selection-start-column="23" selection-end-line="5" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/erc/templates/erc/event_detail.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="529">
-          <caret line="76" column="14" lean-forward="true" selection-end-line="76" selection-end-column="14" />
-          <folding>
-            <element signature="e#6803#6849#0" expanded="true" />
-            <element signature="e#7085#7110#0" expanded="true" />
-            <element signature="e#7194#7212#0" expanded="true" />
-            <element signature="e#7343#7388#0" expanded="true" />
-            <element signature="e#7786#7822#0" expanded="true" />
-            <element signature="e#8074#8110#0" expanded="true" />
+            <element signature="e#0#32#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/erc/templates/erc/newsletter_detail.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="529">
-          <caret line="257" column="56" selection-start-line="257" selection-start-column="56" selection-end-line="257" selection-end-column="56" />
+        <state relative-caret-position="187">
+          <caret line="11" column="14" selection-end-line="91" selection-end-column="14" />
           <folding>
-            <element signature="n#style#0;n#header#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#li#0;n#ul#0;n#nav#0;n#div#0;n#header#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#h2#0;n#div#1;n#div#0;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#h2#0;n#div#1;n#div#0;n#section#0;n#!!top" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/erc/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="461">
+          <caret line="51" column="27" selection-start-line="51" selection-start-column="27" selection-end-line="51" selection-end-column="27" />
+          <folding>
+            <element signature="e#0#31#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/erc/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="527">
+          <caret line="63" column="20" selection-start-line="63" selection-start-column="20" selection-end-line="63" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/erc/templates/erc/event_detail.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="308">
+          <caret line="63" column="166" lean-forward="true" selection-start-line="63" selection-start-column="85" selection-end-line="63" selection-end-column="166" />
+          <folding>
+            <element signature="e#1928#1964#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/erc/static/erc/js/main.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="406">
+          <caret line="136" column="25" selection-start-line="136" selection-start-column="25" selection-end-line="136" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/erc/templates/erc/base_events_news.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="274">
+          <caret line="41" column="5" selection-start-line="41" selection-start-column="5" selection-end-line="41" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/erc/templates/erc/base.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="5123">
+          <caret line="370" column="18" lean-forward="true" selection-start-line="370" selection-start-column="18" selection-end-line="370" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/erc/templates/erc/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="540">
+          <caret line="139" lean-forward="true" selection-start-line="139" selection-end-line="139" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/erc/templates/erc/news.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="390">
+          <caret line="35" column="26" selection-start-line="35" selection-start-column="26" selection-end-line="35" selection-end-column="26" />
         </state>
       </provider>
     </entry>

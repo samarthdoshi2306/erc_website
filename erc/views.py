@@ -5,14 +5,10 @@ from django.db import connections
 
 # Create your views here.
 def home_view (request, *args, **kwargs):
-	anirudh=Team.objects.get(id=2)
-	jian=Team.objects.get(id=3)
 	team=Team.objects.all()
 	event=Event.objects.all()
 	news=Newsletter.objects.all()
 	content={
-	'anirudh':anirudh,
-	'jian':jian,
 	'team':team,
 	'events':event,
 	'news':news,
@@ -38,6 +34,9 @@ def blog_view(request, *args, **kwargs):
 	'blog' :img,
 	}
 	return render(request,"erc/blog/lf.html",content)
+
+def reView(request,*args, **kwargs):
+	return render(request,'erc/reviews/testimonials.html')
 
 
 

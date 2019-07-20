@@ -31,13 +31,9 @@ class Blog(models.Model):
 	title=models.CharField(max_length=80)
 	parts=models.IntegerField()
 	author=models.CharField(max_length=80)
-<<<<<<< HEAD
-	date=models.DateTimeField()
+	date=models.DateField()
 	def get_absolute_url(self):
 		return reverse('erc:blog',kwargs={'name':self.title})
-=======
-	date=models.DateField()
->>>>>>> cb44131719c403c89689bac7492c82d7aa2466d2
 
 class BlogPart(models.Model):
 	Blogtitle=models.CharField(max_length=80,null=False)

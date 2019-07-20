@@ -933,15 +933,17 @@ h6 {
   background: rgba(205,225,225,0.8);
   padding: 60px 0;
   box-shadow: inset 0px 0px 12px 0px rgba(0, 0, 0, 0.1);
-  text-align: center;
+  justify-content: center;
 }
 
 #team .member {
   text-align: center;
   margin-bottom: 20px;
-  position: relative;
+  position:relative;
   border-radius: 50%;
   overflow: hidden;
+  justify-content: center;
+  float: none;
 }
 
 #team .member .member-info {
@@ -1062,8 +1064,8 @@ h6 {
 --------------------------------*/
 
 #contact {
-  box-shadow: 0px 0px 12px 0px rgba(0, 0, 0, 0.1);
-  background: rgba(254,216,177,0.5);
+  box-shadow: 0px 0px 12px 0px rgba(0, 0, 0, 0);
+  background: rgba(254,216,177,0.7);
   padding: 60px 0;
   overflow: hidden;
 }

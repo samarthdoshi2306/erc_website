@@ -50,6 +50,9 @@ def blog_view(request,name, *args, **kwargs):
 def reView(request,*args, **kwargs):
 	return render(request,'erc/reviews/testimonials.html')
 
+def reView(request,*args, **kwargs):
+	return render(request,'erc/reviews/testimonials.html')
+
 
 
 def newsletter_detail(request,Newsletter_id):
@@ -58,4 +61,8 @@ def newsletter_detail(request,Newsletter_id):
 	except Newsletter.DoesNotExist:
 		raise Http404("Newsletter Does Not Exist")
 	return render(request,'erc/newsletter_detail.html',{'newsletter':newsletter})
+
+def news(request):
+	news=News.objects.all()
+	return render(request,'erc/news.html',{'news':news})
 	

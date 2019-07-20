@@ -1,0 +1,257 @@
+{% extends "BlogBase.html" %} 
+title      = rasbe
+heading    = Raspberry Pi
+subheading = Get started with using Raspberry Pi though this tutorial.
+category   = None
+tags       = None
+author     = Darshan Tank, Pranav Sankhe, Om Kolhe, Tanya Chaudhary, Sanket Agrawal, Arkya Chatterjee, Parth Kothari
+date       = July 07, 2016
+
+//(DO NOT REMOVE THESE LINES)
+//(WRITE YOUR BLOG BELOW)
+
+<p>The <strong>Raspberry Pi</strong> (read R-pi) is a series of low-cost, credit card-sized single-board computers. It is just like any other computer and features built in <strong><em>Wi-Fi</em></strong>, <strong><em>Bluetooth</em></strong>. You can connect a keyboard, mouse through USB or Bluetooth and a display monitor through HDMI cable and start using it just like a normal computer.</p>
+<p>But the real power of Rpi is realized in <strong>embedded systems</strong>. The Raspberry Pi has the ability to interact with the outside world, and has been used in a wide array of digital maker projects, from <strong><em>music machines</em></strong> and <strong><em>parent detectors</em></strong> to <strong><em>weather stations</em></strong> and <strong><em>tweeting birdhouses with infra-red cameras</em></strong>.</p>
+<hr>
+<h2>Contents:</h2>
+<div class="content index" style="padding: 1.5em; font-size: 1.5em; background-color: #f6f6f6;">
+    <ul class="content-list" type="none">
+        <li>
+            <a href="#firstlook">1: First Look</a>
+        </li>
+        <li>
+            <a href="#installation">2: Installation</a>
+            <ul class="content-sublist" type="none">
+                <li>
+                    <a href="#linux">
+                                    2.1: Linux
+                                </a>
+                </li>
+                <li>
+                    <a href="#windows">
+                                    2.2: Windows
+                                </a>
+                </li>
+                <li>
+                    <a href="#osx">
+                                    2.3: OSX
+                                </a>
+                </li>
+            </ul>
+        </li>
+        <li>
+            <a href="#configuration">3: Configuration</a>
+        </li>
+        <li>
+            <a href="#gpio">4: GPIO Pins</a>
+            <ul class="content-sublist" type="none">
+                <li>
+                    <a href="#configure-gpio">
+                                    4.1: Configuring GPIO
+                                </a>
+                </li>
+                <li>
+                    <a href="#basics-gpio">
+                                    4.2: Basics of GPIO Programming
+                                </a>
+                </li>
+            </ul>
+        </li>
+    </ul>
+</div>
+<hr>
+<div id="firstlook">
+    <h2>First Look</h2>
+    <p>
+        <h3 id="what-does-raspberry-pi-board-look-like">What does Raspberry Pi board look like?</h3>
+        <p>The image given below is a top-view of Raspberry Pi 3 model B.
+            <img id="img1"src="/static/erc/assets/assets/tutorials/r_pi/image_0.png" alt="Raspberry Pi 3" /></p>
+        <ul>
+            <li>
+                <p>The 40 pins shown at the top contain the Ground pins, I2C, SPI, GPIO pins, supply voltage pins.</p>
+            </li>
+            <li>
+                <p>On the right, the top two structures are the USB ports and bottom one is the ethernet port.</p>
+            </li>
+            <li>
+                <p>Comming down, we have the USB charging port on the left and the and the HDMI port next to it.</p>
+            </li>
+            <li>
+                <p>On the left hand side we have a micro SD slot which acts as the hard drive of Raspberry Pi.</p>
+            </li>
+        </ul>
+        <p>Now lets have a closer look at those 40 pins. Here is a pin diagram of those 40 pins.
+            <img id="img2"src="/static/erc/assets/assets/tutorials/r_pi/image_1.png" alt="Raspberry Pi 3 Pin Diagram" /> We can see that out of the 40 pins</p>
+        <ul>
+            <li>26 pins are GPIO pins</li>
+            <li>8 pins are Ground</li>
+            <li>2 pins are 5V supply</li>
+            <li>2 pins are 3.3V supply</li>
+            <li>The other 2 pins are ID_SD and ID_SC used in I2C communication</li>
+        </ul>
+        <p>The GPIO pins are used to connect to electronic devices and can be used as input or output. GPIO 2 and 3 can be used for I2C communication as they are the SDA and SCL pins respectively.</p>
+        <p>The 5V pins can be used to give 5V supply to any of the electronic devices. Same goes for 3.3V pins.</p>
+    </p>
+</div>
+<hr>
+<div id="installation">
+    <h2>Installation</h2>
+    <p>
+        <p>Depending on whether your laptop/pc has Linux or Windows, follow this steps to set your Raspberry Pi.</p>
+        <h3 id="for-linux">For Linux<a name="linux"></a></h3>
+        <ol>
+            <li>First download the image file of the operating system you want to install on your R-pi.</li>
+            <li>Open a linux terminal of your choice.</li>
+            <li>Connect your R-pi to laptop using the connector and insert the memory card in its slot.</li>
+            <li>
+                <p>Now unmount the memory card using command:</p>
+                <p><code class="highlighter-rouge">sudo umount /dev/PORT_NAME</code></p>
+                <p>To see which port your sdcard belongs to, type:</p>
+                <p><code class="highlighter-rouge">lsblk</code></p>
+            </li>
+            <li>
+                <p>To copy the contents of img file to sdcard, type:</p>
+                <p><code class="highlighter-rouge">sudo dd if=PATH_TO_IMG_FILE of=PATH_TO_SD_CARD_MOUNT_POINT</code></p>
+            </li>
+            <li>It may take some time to copy the contents. Once done, you are ready to configure your r-pi.</li>
+        </ol>
+        <h3 id="for-windows">For Windows<a name="windows"></a></h3>
+        <ol>
+            <li>First download the image file of the operating system you want to install on your R-pi.</li>
+            <li><a href="https://launchpad.net/win32-image-writer/+download">Download Win32DiskImager</a> and unzip the application (.exe file) inside.</li>
+            <li>Insert your SD card into your Windows PC using a card reader.</li>
+            <li>Open Win32DiskImager.exe with Administrator privileges ( That is, right click on it and choose “Run as Administrator” ).</li>
+            <li>If your SD card isn’t automatically detected by the application, click on the drop-down menu at the top right (labeled “Device”) and choose it from the list.</li>
+            <li>In the image file section of the application, click the little folder icon and choose .img file of your operating system.</li>
+            <li>Click the Write button and wait for Win32DiskImager to do its thing. When it finishes, you can safely eject your SD card and insert it into your Raspberry Pi.</li>
+        </ol>
+        <h3 id="for-osx">For OSX<a name="osx"></a></h3>
+        <ol>
+            <li>First download the image file of the operating system you want to install on your R-pi.</li>
+            <li><a href="https://alltheware.wordpress.com/2012/12/11/easiest-way-sd-card-setup/">Download RPi-sd card builder</a> (be sure to pick the appropriate version for your installed version of OS X) and unzip the application.</li>
+            <li>Insert your SD card into your Mac using a card reader.</li>
+            <li>Open RPi-sd card builder. You’ll immediately be asked to choose a Raspbian image. Choose the .img file you downloaded earlier.</li>
+            <li>You’ll be asked if your SD card is connected. Since we inserted it earlier, it is, so go ahead and click Continue. You’ll be presented with SD card options. If you only have one inserted, you won’t see anything else in the list and it’ll be checked. If not, just check only the card you want to use and click OK.</li>
+            <li>Enter your administrator password and click OK. You’ll be asked if the SD card was ejected. This is supposed to happen, as the application needs to unmount it so it can perform a direct copy. Double-check that your SD card is no longer available in the Finder. DO NOT remove it from your USB port. When you’re sure, click Continue.</li>
+            <li>RPi-sd card builder finishes prepping your SD card, safely eject it and insert it into your Raspberry Pi unit.</li>
+        </ol>
+        <hr />
+        <p>Time to configure your R-pi!</p>
+    </p>
+</div>
+<hr>
+<div id="configuration">
+    <h2>Configuration</h2>
+    <p>
+        <p>We use SSH to control R-pi through our laptop for SSH, we need r-pi to be connected to some network.</p>
+        <p>We can configure R-pi’s SSH, without ever requiring to boot R-pi.</p>
+        <p>Open os/etc/wpa_supplicant/wpa_supplicant.conf and write following piece of code in it:</p>
+        <figure class="highlight"><pre><code class="language-python" data-lang="python"><span class="n">network</span><span class="o">=</span><span class="p">{</span>
+        <span class="n">ssid</span><span class="o">=</span><span class="s">"WIFI_NAME"</span>
+        <span class="n">psk</span><span class="o">=</span><span class="s">"WIFI_PASSWORD"</span>
+<span class="p">}</span></code></pre></figure>
+        <p>Use command ‘ifconfig’ to see ip,network,gateway of your Wi-fi.</p>
+        <p>For setting static ip, open etc/network/interfaces.d 1- Change auto lo to wlan0 2- Change manual to static 3- After iface wlan0 inet manual , enter =&gt; address network gateway(first ip of subnet)</p>
+        <p>Once configured, type ‘ssh pi@address’ in terminal to connect to your R-pi.</p>
+    </p>
+</div>
+<hr>
+<div id="gpio">
+    <h2>GPIO Pins</h2>
+    <p>
+        <h3 id="configuring-gpio">Configuring GPIO<a name="configure-gpio"></a></h3>
+        <p>For programming the GPIO pins we have to install the python 2 library RPi.GPIO. This module makes it simple to use the GPIO pins. To install RPi.GPIO on your Raspberry Pi follow the following instructions.</p>
+        <p>In the LXTerminal of your R-Pi type the commands</p>
+        <div class="highlighter-rouge"><pre class="highlight"><code>sudo apt-get update    
+</code></pre>
+        </div>
+        <p>To install RPi.GPIO, you first need to install the Python Development toolkit that RPi.GPIO requires.</p>
+        <p>To do this enter the following command:</p>
+        <div class="highlighter-rouge"><pre class="highlight"><code>sudo apt-get install python-dev
+</code></pre>
+        </div>
+        <p>Then to install Rpi.GPIO itself type:</p>
+        <div class="highlighter-rouge"><pre class="highlight"><code>sudo apt-get install python-rpi.gpio
+</code></pre>
+        </div>
+        <p><strong><em>Thats it! Now you are ready to program GPIO pins.</em></strong></p>
+        <h3 id="basics-of-gpio-programming">Basics of GPIO programming<a name="basics-gpio"></a></h3>
+        <p>To program GPIO pins you have to import RPi.GPIO library in your python program. To do this type the following line at the top of your program:</p>
+        <div class="highlighter-rouge"><pre class="highlight"><code>import RPi.GPIO as GPIO
+</code></pre>
+        </div>
+        <p>But before we start programming we have to set the numbering system of the pins. There are two types of numbering systems:</p>
+        <ul>
+            <li>BOARD</li>
+            <li>BCM</li>
+        </ul>
+        <p>The GPIO.BOARD option specifies that you are referring to the pins by the number of the pin the the plug - i.e the numbers printed on the board (e.g. P1) and in the middle of the diagrams below.</p>
+        <p>The GPIO.BCM option means that you are referring to the pins by the “Broadcom SOC channel” number, these are the numbers after “GPIO” in the green rectangles around the outside of the below diagrams:</p>
+        <p>In the image below the numbers in the middle correspond to BOARD numbering and those written outside refer to BCM numbering.
+            <img id="img3"src="/static/erc/assets/assets/tutorials/r_pi/image_2.png" alt="Pin Numbering" /></p>
+        <p>Based on which numbering system is comfortable to you, which RPi shield your are using, what program you are using you can choose the numbering sytem which is most convinient to you.</p>
+        <p>To specify in your code which number-system is being used, use the <strong>GPIO.setmode()</strong> function. For example…</p>
+        <div class="highlighter-rouge"><pre class="highlight"><code>GPIO.setmode(GPIO.BCM)
+</code></pre>
+        </div>
+        <p>or</p>
+        <div class="highlighter-rouge"><pre class="highlight"><code>GPIO.setmode(GPIO.BOARD)
+</code></pre>
+        </div>
+        <p>After specifying the numbering system we have to decide whether the pins that we are using will be input or output (just like in Arduino).</p>
+        <p>To do this we use <strong>GPIO.setup()</strong> function. So if you want to setup pin 4 as output you would enter:</p>
+        <div class="highlighter-rouge"><pre class="highlight"><code>GPIO.setup(4, GPIO.OUT)  
+</code></pre>
+        </div>
+        <p>If you want to set pin 17 as input you would enter:</p>
+        <div class="highlighter-rouge"><pre class="highlight"><code>GPIO.setup(17, GPIO.IN) 
+</code></pre>
+        </div>
+        <p>So if you have set a particular pin as input you would like to read the value of that pin. To do this you would use the <strong>GPIO.input()</strong> function.</p>
+        <p>For example if you would like to read the value of pin 17 you would enter:</p>
+        <div class="highlighter-rouge"><pre class="highlight"><code>GPIO.input(17)
+</code></pre>
+        </div>
+        <p>If you have setup a pin as output you would like to write a value to it. You would use the function <strong>GPIO.output()</strong> for it.</p>
+        <p>For example if you would like to set the value of pin 4 as HIGH you would enter:</p>
+        <div class="highlighter-rouge"><pre class="highlight"><code>GPIO.output(4, GPIO.HIGH)
+</code></pre>
+        </div>
+        <p>If you want to set it as low:</p>
+        <div class="highlighter-rouge"><pre class="highlight"><code>GPIO.output(4, GPIO.LOW)
+</code></pre>
+        </div>
+        <p>Now that you know how to set input and output of pins you are set to use any electronic devices along with the entire convinience of python.</p>
+        <p>One important thing to note that after the program is terminated either on its own or by a Keyboard Interrupt some of the pins which were high remain high after execution of the program. So in order to set everything to low we use the <strong>GPIO.cleanup()</strong> function.</p>
+        <p>Here is an example of simple LED blink program in which the usage of each and every function will become clear</p>
+        <figure class="highlight"><pre><code class="language-python" data-lang="python">    <span class="kn">import</span> <span class="nn">RPi.GPIO</span> <span class="kn">as</span> <span class="nn">GPIO</span>
+    <span class="kn">import</span> <span class="nn">time</span>
+    <span class="n">GPIO</span><span class="o">.</span><span class="n">setmode</span><span class="p">(</span><span class="n">GPIO</span><span class="o">.</span><span class="n">BCM</span><span class="p">)</span>
+    <span class="n">GPIO</span><span class="o">.</span><span class="n">setup</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="n">GPIO</span><span class="o">.</span><span class="n">OUT</span><span class="p">)</span>
+    
+    <span class="k">try</span><span class="p">:</span>
+        <span class="k">while</span> <span class="bp">True</span><span class="p">:</span>
+            <span class="n">GPIO</span><span class="o">.</span><span class="n">output</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="n">GPIO</span><span class="o">.</span><span class="n">HIGH</span><span class="p">)</span>
+            <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+            <span class="n">GPIO</span><span class="o">.</span><span class="n">output</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="n">GPIO</span><span class="o">.</span><span class="n">LOW</span><span class="p">)</span>
+            <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+    <span class="k">except</span> <span class="nb">KeyboardInterrupt</span><span class="p">:</span>
+        <span class="n">GPIO</span><span class="o">.</span><span class="n">cleanup</span><span class="p">()</span></code></pre></figure>
+        <p>When we execute this program with a led at pin 4 we would see the LED blinking at a rate of 1 second. This program would go on for ever unless we terminate it by CTRL-C which is a KeyBoardInterrupt which then initiates the GPIO.cleanup function.</p>
+        <p>With this much knowledge you should be able to interface any electronic equipment with R-Pi with one last precation :P.</p>
+        <p>All the GPIO pins on R-pi are 3.3 volt logic level. So it is not safe to connect any device that gives or takes more than 3.3v as it might damage the GPIO pins. If you have to use any device that has a 5V supply such as HCSR04 ultrasonic sensors you should use a potential divider.</p>
+        <hr />
+        <p><strong><em>Time to try some good projects with your R-pi. Happy tinkering!</em></strong></p>
+<script>
+  var images=[]
+  function getURL(part){
+    images={{blog|safe}}
+
+    return images[part-1]
+  };
+  var i=1;
+  for (i = 1; i <=x; i++) { 
+        document.getElementById("img" + i).src ="/media/"+getURL(i); 
+    }
+  
+</script>

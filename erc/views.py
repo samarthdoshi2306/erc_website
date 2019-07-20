@@ -9,12 +9,13 @@ def home_view (request, *args, **kwargs):
 	jian=Team.objects.get(id=3)
 	team=Team.objects.all()
 	event=Event.objects.all()
-	
+	news=Newsletter.objects.all()
 	content={
 	'anirudh':anirudh,
 	'jian':jian,
 	'team':team,
 	'events':event,
+	'news':news,
 	}
 	return render(request,"erc/index.html",content)
 

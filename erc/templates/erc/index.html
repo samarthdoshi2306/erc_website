@@ -152,56 +152,25 @@
       <div class="container">
 
         <header class="section-header">
-          <h3>Testimonial</h3>
+          <h3>Newsletter</h3>
         </header>
 
         <div class="row justify-content-center">
           <div class="col-lg-8">
 
             <div class="owl-carousel testimonials-carousel wow fadeInUp">
-    
+              {%for article in news%}
               <div class="testimonial-item">
-                <img src="img/testimonial-1.jpg" class="testimonial-img" alt="">
-                <h3>Hrushikesh Lohiya</h3>
-                <h4></h4>
-                
-              	<div><object data="reviews/hrushikesh.txt"></object></div>
-              </div>
-    
-              <div class="testimonial-item">
-                <img src="img/testimonial-2.jpg" class="testimonial-img" alt="">
-                <h3>Arkya Chaterjee</h3>
+                <img src="{{article.image.url}}" class="testimonial-img" alt="">
+                <h3>{{article.title}}</h3>
                 <h4></h4>
                 <p>
+                  {{article.content}}
                 </p>
               </div>
     
-              <div class="testimonial-item">
-                <img src="img/testimonial-3.jpg" class="testimonial-img" alt="">
-                <h3>Jena Karlis</h3>
-                <h4>Store Owner</h4>
-                <p>
-                  Enim nisi quem export duis labore cillum quae magna enim sint quorum nulla quem veniam duis minim tempor labore quem eram duis noster aute amet eram fore quis sint minim.
-                </p>
-              </div>
+              {%endfor%}
     
-              <div class="testimonial-item">
-                <img src="img/testimonial-4.jpg" class="testimonial-img" alt="">
-                <h3>Matt Brandon</h3>
-                <h4>Freelancer</h4>
-                <p>
-                  Fugiat enim eram quae cillum dolore dolor amet nulla culpa multos export minim fugiat minim velit minim dolor enim duis veniam ipsum anim magna sunt elit fore quem dolore labore illum veniam.
-                </p>
-              </div>
-    
-              <div class="testimonial-item">
-                <img src="img/testimonial-5.jpg" class="testimonial-img" alt="">
-                <h3>John Larson</h3>
-                <h4>Entrepreneur</h4>
-                <p>
-                  Quis quorum aliqua sint quem legam fore sunt eram irure aliqua veniam tempor noster veniam enim culpa labore duis sunt culpa nulla illum cillum fugiat legam esse veniam culpa fore nisi cillum quid.
-                </p>
-              </div>
 
             </div>
 
@@ -222,10 +191,10 @@
           <p><strong>Filled with techsiness ;) </strong></p>
         </div>
         
-        <div class="row flex-nowrap"  style="text-align: center;">
+        <div class="row flex-nowrap justify-content-center">
           <!--managers-->
           <!--div class="col-lg-5 col-md-5 wow fadeInUp"></div-->
-          <div class="col-lg-6 col-md-3 wow fadeInUp" >
+          <div class="col-lg-3 col-md-3 wow fadeInUp" >
             <div class="member">
               <img src="{{jian.image.url}}" class="img-fluid" alt="">
               <div class="member-info">
@@ -243,7 +212,7 @@
             </div>
           </div>
 
-          <div class="col-lg-6 col-md-3 wow fadeInUp" >
+          <div class="col-lg-3 col-md-3 wow fadeInUp" >
             <div class="member">
               <img src="{{anirudh.image.url}}" class="img-fluid" alt="">
               <div class="member-info">
@@ -265,7 +234,7 @@
         </div>
           <!--conveners-->
           <br><br><br><br><br>         
-        <div class="row">
+        <div class="row justify-content-center">
           {% for member in team %}
             {%if member.post == "Convener" %}
             <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.2s">
@@ -287,8 +256,10 @@
           </div>
           {%endif%}
           {%endfor%}
-        
+        </div>
+        <br><br><br><br><br>
 
+        <div class="row justify-content-center">
           {% for member in team %}
             {%if member.post == "Volunteer" %}
             <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.2s">

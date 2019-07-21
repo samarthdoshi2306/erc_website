@@ -1,12 +1,6 @@
 from django.contrib import admin
 from django.urls import include,path
-<<<<<<< HEAD
 from .views import *
-=======
-from .views import home_view,event_detail,blog_view,newsletter_detail,news
-from .views import *
-
->>>>>>> 8bf9405bcc77c9ad50cb908eb615f5679b9438e9
 from django.conf.urls.static import static
 from django.conf import settings
 

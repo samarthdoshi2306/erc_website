@@ -28,7 +28,7 @@ def blogList(request,*args,**kwargs):
 	content={
 	'blogs':queryset
 	}
-	return render(request,'erc/blog/Bloglist.html',content)
+	return render(request,'erc/blog/blogList.html',content)
 
 def blog_view(request,name, *args, **kwargs):
 	try:

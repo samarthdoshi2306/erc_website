@@ -28,23 +28,48 @@
 
 {% block body %}
 
-<br>
-<br>
-<br>
-<br>
-{%for newss in news %}
-<div align="center"><h1>{{newss.headline}}-{{newss.date}}</h1><div>
-    <div align="center"><img src="{{newss.image.url}}"/><div>
-        <br>
-<div  class="container">
-    <div >
-        <div align="center"> <a class="btn btn-primary view-pdf" href="{{newss.pdf.url}}">Click here for Newsletter</a></div>
+
+        <section id="portfolio" class="clearfix">
+      <div class="container">
+
+        <header class="section-header">
+          <h3 class="section-title">HEADLINES</h3>
+        </header>
+
+        <div class="row">
+          <div class="col-lg-12">
+            <ul id="portfolio-flters">
+           
+            </ul>
+          </div>
+        </div>
+
+        <div class="row portfolio-container">
+
+          {%for newss in news%}
+
+          <div class="col-lg-4 col-md-6 portfolio-item  {{newss.filterClass}} footer-links" data-wow-delay="0.1s">
+            <div class="portfolio-wrap">
+              <img src="{{newss.image.url}}" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4><a href="{{newss.get_absolute_url}}">{{newss.headline}}-{{newss.date}}</a></h4>
+
+                <div>
+                  <div  class="container">
+        <div> <a class="btn btn-primary view-pdf" style="border-radius:50%" href="{{newss.pdf.url}}"><i class="ion ion-eye"></i></a></div>
 	</div>
-</div>
 
+                    <div align="center">    <a href="{{newss.get_absolute_url}}" class="link-details" title="More Details"><i class="ion ion-android-open"></i></a></div>
+                </div>
+              </div>
+            </div>
+          </div>
 
+          {%endfor%}
 
-      <hr width="50%" >
-{% endfor %}
+        </div>
+
+      </div>
+    </section><!-- #portfolio -->
 
 {% endblock %}

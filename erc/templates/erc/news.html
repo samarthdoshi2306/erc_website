@@ -8,8 +8,8 @@
 <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
 <style>
     .iframe-container {
-    padding-bottom: 60%;
-    padding-top: 30px; height: 0; overflow: hidden;
+    padding-bottom: 80%;
+    padding-top: 10px; height: 0; overflow: hidden;
 }
 
 .iframe-container iframe,
@@ -33,7 +33,7 @@
       <div class="container">
 
         <header class="section-header">
-          <h3 class="section-title">HEADLINES</h3>
+          <h3 class="section-title">Our newsletters</h3>
         </header>
 
         <div class="row">
@@ -53,13 +53,13 @@
               <img src="{{newss.image.url}}" class="img-fluid" alt="">
               <div class="portfolio-info">
                 <h4><a href="{{newss.get_absolute_url}}">{{newss.headline}}-{{newss.date}}</a></h4>
-
+                    <br>
                 <div>
                   <div  class="container">
         <div> <a class="btn btn-primary view-pdf" style="border-radius:50%" href="{{newss.pdf.url}}"><i class="ion ion-eye"></i></a></div>
 	</div>
 
-                    <div align="center">    <a href="{{newss.get_absolute_url}}" class="link-details" title="More Details"><i class="ion ion-android-open"></i></a></div>
+
                 </div>
               </div>
             </div>

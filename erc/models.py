@@ -7,7 +7,7 @@ from django.urls import reverse
 
 class Event(models.Model):
 	name=models.CharField(max_length=80)
-	problem_statement=models.FileField(null=True,blank=True)
+	problem_statement=models.FileField(upload_to='media/events/pdf',null=True,blank=True)
 	video=models.CharField(max_length=100,null=True,blank=True)
 	event_status=models.CharField(max_length=100,null=True,blank=True)
 	content=models.TextField(null=True,blank=True)

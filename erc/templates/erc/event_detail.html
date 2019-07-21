@@ -25,10 +25,10 @@
 
 
 {% block body %}
-
+<section style="background-color:#DAF7A6;">
   <br>
   <br>
-  <div align="center"><img src={{event.img.url}} height="400" width="600"></div>
+  <div align="center"><img src={{event.img.url}} height="400" ></div>
   <br>
   <div align="center" ><h1 style="font-style:italic"><b>{{event.name}}</b></h1></div>>
   {% if event.date%}
@@ -46,17 +46,18 @@
   <br>
   <br>
   <br>
-  <div align="center"><h3 style="text-shadow: 2px 2px 5px red">PROBLEM STATEMENT</h3><iframe src="{{event.problem_statement.url}}" height="1000" width="800"></iframe></div>>
+  <div align="center"><h3>PROBLEM STATEMENT</h3><iframe src="{{event.problem_statement.url}}" height="1000" width="800"></iframe></div>>
   <br>
   <br>
   <div align="center" ><a href="#" class="square_btn" >LINK TO THE TUTORIAL</a></div>
   <br>
   <br>
-  <div align="center"><h3 style="text-shadow: 2px 2px 5px red">DEMO VIDEO</h3></div>
-  <div align="center"><video height="400" width="600" controls>
+  <div align="center"><h3>DEMO VIDEO</h3></div>
+  <div align="center"><video height="500"  controls>
   <source src="{{event.video}}" type="video/mp4">
   </video></div>
   {%endif%}
   <br>
   <br>
+</section>
 {% endblock %}

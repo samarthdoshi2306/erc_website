@@ -48,6 +48,6 @@ def newsletter_detail(request,Newsletter_id):
 	return render(request,'erc/newsletter_detail.html',{'newsletter':newsletter})
 
 def news(request):
-	news=News.objects.all()
+	news=News.objects.all().order_by('-id')
 	return render(request,'erc/news.html',{'news':news})
 	

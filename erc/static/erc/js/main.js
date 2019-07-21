@@ -14,8 +14,13 @@
   $(window).scroll(function() {
     if ($(this).scrollTop() > 100) {
       $('.back-to-top').fadeIn('slow');
+      //for logo transition
+      document.getElementById("top-left-logo").disabled = false;
+      document.getElementById("top-left-logo").style.visibility = "visible";
     } else {
       $('.back-to-top').fadeOut('slow');
+      document.getElementById("top-left-logo").disabled = true;
+      document.getElementById("top-left-logo").style.visibility = "hidden";
     }
   });
   $('.back-to-top').click(function(){
@@ -25,7 +30,7 @@
 
   // Initiate the wowjs animation library
   new WOW().init();
-
+  var popup=true;
   // Header scroll class
   $(window).scroll(function() {
     if ($(this).scrollTop() > 100) {
@@ -33,12 +38,32 @@
     } else {
       $('#header').removeClass('header-scrolled');
     }
+    //popup window
+    if ($(window).scrollTop() > $('#testimonials').offset().top &&popup) {
+      var link = document.getElementById('newsletter-popup-button');
+      link.click();
+      popup=false;
+     $('.popup').fadeIn("slow");
+  }
   });
+  //popup window
+  if ($(window).scrollTop() > $('#testimonials').offset().top &&popup) {
+      var link = document.getElementById('newsletter-popup-button');
+      link.click();
+      popup=false;
+     $('.popup').fadeIn("slow");
+  }
 
   if ($(window).scrollTop() > 100) {
     $('#header').addClass('header-scrolled');
+      document.getElementById("top-left-logo").disabled = false;
+      document.getElementById("top-left-logo").style.visibility = "visible";
   }
-
+  else{
+    document.getElementById("top-left-logo").disabled = true;
+      document.getElementById("top-left-logo").style.visibility = "hidden";
+  }
+  
   // Smooth scroll for the navigation and links with .scrollto classes
   $('.main-nav a, .mobile-nav a, .scrollto').on('click', function() {
     if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {

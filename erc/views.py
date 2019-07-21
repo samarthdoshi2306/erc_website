@@ -48,12 +48,13 @@ def blog_view(request,name, *args, **kwargs):
 	return render(request,"erc/blog/{}".format(name),content)
 
 def reView(request,*args, **kwargs):
-	return render(request,'erc/reviews/testimonials.html')
-
-def reView(request,*args, **kwargs):
-	return render(request,'erc/reviews/testimonials.html')
-
-
+	one=reviews.objects.get(id=1)
+	two=reviews.objects.get(id=2)
+	content={
+	'first': one,
+	'second':two,
+	}
+	return render(request,'erc/reviews/testimonials.html',content)
 
 def newsletter_detail(request,Newsletter_id):
 	try:

@@ -65,3 +65,9 @@ class News(models.Model):
 	date=models.DateField()
 	pdf=models.FileField()
 	headline=models.CharField(max_length=80)
+
+class reviews(models.Model):
+	name=models.CharField(max_length=80)
+	description=models.CharField(max_length=100)
+	image=models.ImageField(upload_to='media/team')
+	review=models.TextField()

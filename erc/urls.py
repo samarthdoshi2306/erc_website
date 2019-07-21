@@ -19,5 +19,6 @@ urlpatterns = [
     #newsletter page
     path('newsletter/<int:Newsletter_id>/', newsletter_detail, name='newsletter_detail'),
     path('news/',news,name='news'),
+    
 
 ]#+static(settings.MEDIA_URL,document_root=settings.MEDIA_ROOT)

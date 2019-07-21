@@ -63,7 +63,7 @@ class Newsletter(models.Model):
 class News(models.Model):
 	image=models.ImageField(upload_to='media/news')
 	date=models.DateField()
-	pdf=models.FileField()
+	pdf=models.FileField(upload_to='media/news/pdfs')
 	headline=models.CharField(max_length=80)
 
 class reviews(models.Model):

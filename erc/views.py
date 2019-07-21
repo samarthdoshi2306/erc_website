@@ -26,7 +26,7 @@ def event_detail(request,Event_id):
 def blogList(request,*args,**kwargs):
 	queryset=Blog.objects.all()
 	content={
-	'blogs':queryset
+	'blogs':queryset,
 	}
 	return render(request,'erc/blog/blogList.html',content)
 
@@ -45,7 +45,7 @@ def blog_view(request,name, *args, **kwargs):
 	'blog' :img,
 	}
 	#search for the html file named 'name'
-	return render(request,"erc/blog/{}".format(name),content)
+	return render(request,"erc/blog/{}.html".format(name),content)
 
 def reView(request,*args, **kwargs):
 	one=reviews.objects.get(id=1)

@@ -1,6 +1,8 @@
 from django.http import Http404
+import django.views.generic as generic_views
 from django.shortcuts import render
 from .models import *
+from .forms import *
 from django.db import connections
 
 # Create your views here.
@@ -48,13 +50,8 @@ def blog_view(request,name, *args, **kwargs):
 	return render(request,"erc/blog/{}".format(name),content)
 
 def reView(request,*args, **kwargs):
-	one=reviews.objects.get(id=1)
-	two=reviews.objects.get(id=2)
-	content={
-	'first': one,
-	'second':two,
-	}
-	return render(request,'erc/reviews/testimonials.html',content)
+	revs=reviews.objects.all()
+	return render(request,'erc/reviews/testimonials.html',{'revs':revs})
 
 def newsletter_detail(request,Newsletter_id):
 	try:
@@ -66,4 +63,8 @@ def newsletter_detail(request,Newsletter_id):
 def news(request):
 	news=News.objects.all().order_by('-id')
 	return render(request,'erc/news.html',{'news':news})
-	
+
+class create_event(generic_views.CreateView):
+	queryset=Event.objects.all()
+	template_name='erc/create_event.html'
+	form_class=EventForm

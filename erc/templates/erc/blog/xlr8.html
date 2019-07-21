@@ -1,4 +1,5 @@
-{% extends "BlogBase.html" %} 
+{% extends "erc/blog/BlogBase.html" %}
+{% block blog %}
 title      = xlr8
 heading    = XLR8
 subheading = XLR8 is the first technical competition of the year. It serves as an introduction to the Tech for the Freshmen in IIT-B. This is your guide for building the XLR8 bot.
@@ -116,8 +117,10 @@ Your browser does not support the video tag.
     return images[part-1]
   };
   var i=1;
-  for (i = 1; i <=x; i++) { 
+  for (i = 1; i <=10; i++) { 
         document.getElementById("img" + i).src ="/media/"+getURL(i); 
     }
   
 </script>
+
+{% endblock %}

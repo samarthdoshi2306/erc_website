@@ -7,7 +7,7 @@ from django.urls import reverse
 
 class Event(models.Model):
 	name=models.CharField(max_length=80)
-	problem_statement=models.FileField(null=True,blank=True)
+	problem_statement=models.FileField(upload_to='media/events/pdf',null=True,blank=True)
 	video=models.CharField(max_length=100,null=True,blank=True)
 	event_status=models.CharField(max_length=100,null=True,blank=True)
 	content=models.TextField(null=True,blank=True)
@@ -31,7 +31,15 @@ class Blog(models.Model):
 	title=models.CharField(max_length=80)
 	parts=models.IntegerField()
 	author=models.CharField(max_length=80)
-	date=models.DateTimeField()
+	date=models.DateField()
+	CATEGORY_CHOICES = (
+    ("informative", ("informative")),
+    ("tutorials", ("tutorials")),
+    ("projects", ("projects"))
+     )
+	filterClass=models.CharField(max_length=80,choices=CATEGORY_CHOICES, default="informative")
+	def get_absolute_url(self):
+		return reverse('erc:blog',kwargs={'name':self.title})
 
 class BlogPart(models.Model):
 	Blogtitle=models.CharField(max_length=80,null=False)
@@ -42,6 +50,8 @@ class BlogPart(models.Model):
 		width_field=None,
 		max_length=100,
 		blank=True)
+	# def __str__(self):
+	# 	return '%s'%self.img.url
 
 class Newsletter(models.Model):
 	title=models.CharField(max_length=100)
@@ -55,3 +65,15 @@ class Newsletter(models.Model):
 # 		max_length=100)
 # 	BlogTitle=models.CharField(max_length=80,null=False)
 # 	BlogPartNum=models.DecimalField(decimal_places=2,max_digits=2,null=False,default=False)
+
+class News(models.Model):
+	image=models.ImageField(upload_to='media/news')
+	date=models.DateField()
+	pdf=models.FileField(upload_to='media/news/pdfs')
+	headline=models.CharField(max_length=80)
+
+class reviews(models.Model):
+	name=models.CharField(max_length=80)
+	description=models.CharField(max_length=100)
+	image=models.ImageField(upload_to='media/team')
+	review=models.TextField()

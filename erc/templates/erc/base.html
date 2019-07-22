@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+</html lang="en">
 <head>
 {% load static %}
   <meta charset="utf-8">
@@ -43,7 +43,8 @@
  <!--==========================
   Header
   ============================-->
-  <header id="header" class="fixed-top" style="background-color: white; opacity: 0.95;">
+  <header id="header" class="fixed-top" style="/*background-color: red;*/   
+  ">
     <div class="container">
 
       <div class="logo float-left">
@@ -54,7 +55,7 @@
 
       <nav class="main-nav float-right d-none d-lg-block">
         <ul>
-          <li class="active" style="color:red;"><a href="#intro">Home</a></li>
+          <li class="active"><a href="#intro">Home</a></li>
           <li><a href="#about">About Us</a></li>
           <li><a href="#testimonials">Newsletter</a></li>
           <li><a href="#portfolio">Events</a></li>
@@ -106,398 +107,8 @@
 
   <main id="main">
 
-    <!--==========================
-      About Us Section
-    ============================-->
-    <section id="about">
-      <div class="container">
-
-        <header class="section-header">
-          <h3>About Us</h3>
-          <p >
-            <img src="{% static 'erc/img/sitelogo.png' %}" class="sitelogo"> 
-          </p>
-        </header>
-
-        <div class="row about-container">
-
-          <!-- <div class="col-lg-6 content order-lg-1 order-2">
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-            </p>
-
-            <div class="icon-box wow fadeInUp">
-              <div class="icon"><i class="fa fa-shopping-bag"></i></div>
-              <h4 class="title"><a href="">Eiusmod Tempor</a></h4>
-              <p class="description">Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi</p>
-            </div>
-
-            <div class="icon-box wow fadeInUp" data-wow-delay="0.2s">
-              <div class="icon"><i class="fa fa-photo"></i></div>
-              <h4 class="title"><a href="">Magni Dolores</a></h4>
-              <p class="description">Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
-            </div>
-
-            <div class="icon-box wow fadeInUp" data-wow-delay="0.4s">
-              <div class="icon"><i class="fa fa-bar-chart"></i></div>
-              <h4 class="title"><a href="">Dolor Sitema</a></h4>
-              <p class="description">Minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat tarad limino ata</p>
-            </div>
-
-          </div>
-
-          <div class="col-lg-6 background order-lg-2 order-1 wow fadeInUp">
-            <img src="img/about-img.svg" class="img-fluid" alt="">
-          </div>
-        </div>
-
-        <div class="row about-extra">
-          <div class="col-lg-6 wow fadeInUp">
-            <img src="img/about-extra-1.svg" class="img-fluid" alt="">
-          </div> -->
-
-          <div>
-
-            <h4><p  style="text-align: center;" >
-             <!-- <br> <br> -->
-            
-            Hello there! Greetings from Electronics & Robotics Club IIT Bombay!
-            We cater to every individual who ever wanted to
-            design their own circuit and control their own bot. <br></h4>
-            <p style="text-align: center;">
-              We are a club that satiates the techie you all possess! The Electronics and Robotics Club was born from the two of its parent clubs(guess which? :p), 2017 being the year of christening. We are headed by our Manager, Jian Vora and our Institute Secretary, Anirudh Mittal. We are a part of ITC, or the Institute Technical Council, IIT Bombay's primary technical body. Other than that we have seven conveners along with many volunteers.
-            </p>
-            <p style="text-align: center;">
-              The main function of the club is to organize events like Sessions, Hackathons, General Championships, Competitions, Workshops, etc. throughout the year. We also maintain a tutorial database and a blog and we are ALWAYS open for contribuitions.
-            </p>
-            <p style="text-align: center; margin-bottom: 0px;" >
-              We love people contacting us, so drop us a line on Facebook, we'll be waiting! <br>  <h1  style="text-align: center;">😃 </h1> 
-            </p>
-          </div>
-        </div>
-
-        <!-- <div class="row about-extra">
-          <div class="col-lg-6 wow fadeInUp order-1 order-lg-2">
-            <img src="img/about-extra-2.svg" class="img-fluid" alt="">
-          </div>
-
-          <div class="col-lg-6 wow fadeInUp pt-4 pt-lg-0 order-2 order-lg-1">
-            <h4>Neque saepe temporibus repellat ea ipsum et. Id vel et quia tempora facere reprehenderit.</h4>
-            <p>
-             Delectus alias ut incidunt delectus nam placeat in consequatur. Sed cupiditate quia ea quis. Voluptas nemo qui aut distinctio. Cumque fugit earum est quam officiis numquam. Ducimus corporis autem at blanditiis beatae incidunt sunt. 
-            </p>
-            <p>
-              Voluptas saepe natus quidem blanditiis. Non sunt impedit voluptas mollitia beatae. Qui esse molestias. Laudantium libero nisi vitae debitis. Dolorem cupiditate est perferendis iusto.
-            </p>
-            <p>
-              Eum quia in. Magni quas ipsum a. Quis ex voluptatem inventore sint quia modi. Numquam est aut fuga mollitia exercitationem nam accusantium provident quia.
-            </p>
-          </div>
-          
-        </div>
-
-      </div>
-      -->
-
-      <div class="col-lg-6 wow fadeInUp pt-5 pt-lg-0">
-      </div>
-    </section><!-- #about -->
-
-    
-    <!--==========================
-      Portfolio Section
-    ============================-->
-    <section id="portfolio" class="clearfix">
-      <div class="container">
-
-        <header class="section-header">
-          <h3 class="section-title">Events</h3>
-        </header>
-
-        <div class="row">
-          <div class="col-lg-12">
-            <ul id="portfolio-flters">
-              <li data-filter="*" class="filter-active">All</li>
-              <li data-filter=".filter-app">Competitions</li>
-              <li data-filter=".filter-card">Talks</li>
-              <li data-filter=".filter-web">Bootcamps</li>
-            </ul>
-          </div>
-        </div>
-
-        <div class="row portfolio-container">
-          
-          {%for event in events%}
-
-          <div class="col-lg-4 col-md-6 portfolio-item  {{event.filterClass}} footer-links" data-wow-delay="0.1s">
-            <div class="portfolio-wrap">
-              <img src="{{event.img.url}}" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4><a href="{{event.get_absolute_url}}">{{event.name}}</a></h4>
-                
-                <div>
-                  <a href="{{event.get_absolute_url}}" class="link-preview" data-lightbox="portfolio" data-title="Web" title="Preview"><i class="ion ion-eye"></i></a>
-                  <a href="{{event.get_absolute_url}}" class="link-details" title="More Details"><i class="ion ion-android-open"></i></a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          {%endfor%}
-
-        </div>
-        
-      </div>
-    </section><!-- #portfolio -->
-
-    <!--==========================
-      Clients Section
-    ============================-->
-    <section id="testimonials" class="section-bg">
-      <div class="container">
-
-        <header class="section-header">
-          <h3>Newsletter</h3>
-        </header>
-
-        <div class="row justify-content-center">
-          <div class="col-lg-8">
-
-            <div class="owl-carousel testimonials-carousel wow fadeInUp">
-    
-              <div class="testimonial-item">
-                <img src="img/testimonial-1.jpg" class="testimonial-img" alt="">
-                <h3>Saul Goodman</h3>
-                <h4>Ceo &amp; Founder</h4>
-                <p>
-                  Proin iaculis purus consequat sem cure digni ssim donec porttitora entum suscipit rhoncus. Accusantium quam, ultricies eget id, aliquam eget nibh et. Maecen aliquam, risus at semper.
-                </p>
-              </div>
-    
-              <div class="testimonial-item">
-                <img src="img/testimonial-2.jpg" class="testimonial-img" alt="">
-                <h3>Sara Wilsson</h3>
-                <h4>Designer</h4>
-                <p>
-                  Export tempor illum tamen malis malis eram quae irure esse labore quem cillum quid cillum eram malis quorum velit fore eram velit sunt aliqua noster fugiat irure amet legam anim culpa.
-                </p>
-              </div>
-    
-              <div class="testimonial-item">
-                <img src="img/testimonial-3.jpg" class="testimonial-img" alt="">
-                <h3>Jena Karlis</h3>
-                <h4>Store Owner</h4>
-                <p>
-                  Enim nisi quem export duis labore cillum quae magna enim sint quorum nulla quem veniam duis minim tempor labore quem eram duis noster aute amet eram fore quis sint minim.
-                </p>
-              </div>
-    
-              <div class="testimonial-item">
-                <img src="img/testimonial-4.jpg" class="testimonial-img" alt="">
-                <h3>Matt Brandon</h3>
-                <h4>Freelancer</h4>
-                <p>
-                  Fugiat enim eram quae cillum dolore dolor amet nulla culpa multos export minim fugiat minim velit minim dolor enim duis veniam ipsum anim magna sunt elit fore quem dolore labore illum veniam.
-                </p>
-              </div>
-    
-              <div class="testimonial-item">
-                <img src="img/testimonial-5.jpg" class="testimonial-img" alt="">
-                <h3>John Larson</h3>
-                <h4>Entrepreneur</h4>
-                <p>
-                  Quis quorum aliqua sint quem legam fore sunt eram irure aliqua veniam tempor noster veniam enim culpa labore duis sunt culpa nulla illum cillum fugiat legam esse veniam culpa fore nisi cillum quid.
-                </p>
-              </div>
-
-            </div>
-
-          </div>
-        </div>
-
-
-      </div>
-    </section><!-- #testimonials -->
-
-    <!--==========================
-      Team Section
-    ============================-->
-    <section id="team">
-      <div class="container">
-        <div class="section-header">
-          <h3>Our Team</h3>
-          <p><strong>Filled with techsiness ;)</strong></p>
-        </div>
-        
-        <div class="row">
-          <!--managers-->
-          <!--div class="col-lg-5 col-md-5 wow fadeInUp"></div-->
-
-          <div class="col-lg-6 col-md-5 wow fadeInUp">
-            <div class="member">
-              <img src="{{jian.image.url}}" class="img-fluid" alt="">
-              <div class="member-info">
-                <div class="member-info-content">
-                  <h4>{{jian.name}}</h4>
-                  <span>{{jian.post}}</span>
-                  <div class="social">
-                    <a href=""><i class="fa fa-twitter"></i></a>
-                    <a href="{{jian.Fb}}"><i class="fa fa-facebook"></i></a>
-                    <a href=""><i class="fa fa-google-plus"></i></a>
-                    <a href=""><i class="fa fa-linkedin"></i></a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-6 col-md-5 wow fadeInUp">
-            <div class="member">
-              <img src="{{anirudh.image.url}}" class="img-fluid" alt="">
-              <div class="member-info">
-                <div class="member-info-content">
-                  <h4>{{anirudh.name}}</h4>
-                  <span>{{anirudh.post}}</span>
-                  <div class="social">
-                    <a href=""><i class="fa fa-twitter"></i></a>
-                    <a href="{{anirudh.Fb.url}}"><i class="fa fa-facebook"></i></a>
-                    <a href=""><i class="fa fa-google-plus"></i></a>
-                    <a href=""><i class="fa fa-linkedin"></i></a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!--div class="col-lg-3 col-md-6 wow fadeInUp"></div-->
-
-        </div>
-          <!--conveners-->
-          <br><br><br><br><br>         
-        <div class="row">
-          {% for member in team %}
-            {%if member.post == "Convener" %}
-            <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.2s">
-            <div class="member">
-              <img src="{{member.image.url}}" class="img-fluid" alt="">
-              <div class="member-info">
-                <div class="member-info-content">
-                  <h4>{{member.name}}</h4>
-                  <span>{{member.post}}</span>
-                  <div class="social">
-                    <a href=""><i class="fa fa-twitter"></i></a>
-                    <a href="{{member.facebook}}"><i class="fa fa-facebook"></i></a>
-                    <a href=""><i class="fa fa-google-plus"></i></a>
-                    <a href=""><i class="fa fa-linkedin"></i></a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          {%endif%}
-          {%endfor%}
-        </div>
-
-        <br><br><br><br><br>
-
-        <div class="row">
-          {% for member in team %}
-            {%if member.post == "Volunteer" %}
-            <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.2s">
-            <div class="member">
-              {%if member.image %}
-              <img src="{{member.image.url}}" class="img-fluid" alt="">
-              {%endif%}
-              <div class="member-info">
-                <div class="member-info-content">
-                  <h4>{{member.name}}</h4>
-                  <span>{{member.post}}</span>
-                  <div class="social">
-                    <a href=""><i class="fa fa-twitter"></i></a>
-                    <a href="{{member.facebook.url}}"><i class="fa fa-facebook"></i></a>
-                    <a href=""><i class="fa fa-google-plus"></i></a>
-                    <a href=""><i class="fa fa-linkedin"></i></a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          {%endif%}
-          {%endfor%}
-        </div>
-      </div>
-    </section>
-
-   
-
-    <!--==========================
-      Contact Section
-    ============================-->
-    <section id="contact">
-      <div class="container-fluid">
-
-        <div class="section-header">
-          <h3>Contact Us</h3>
-        </div>
-
-        <div class="row wow fadeInUp">
-
-          <div class="col-lg-6">
-            <div class="map mb-4 mb-lg-0">
-              <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12097.433213460943!2d-74.0062269!3d40.7101282!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xb89d1fe6bc499443!2sTinkerers+Lab+iitb!5e0!3m2!1smk!2sbg!4v1539943755621" frameborder="0" style="border:0; width: 100%; height: 312px;" allowfullscreen></iframe>
-            </div>
-          </div>
-
-          <div class="col-lg-6">
-            <div class="row">
-              <div class="col-md-5 info">
-                <i class="ion-ios-location-outline"></i>
-                <p>A108 Adam Street, NY 535022</p>
-              </div>
-              <div class="col-md-4 info">
-                <i class="ion-ios-email-outline"></i>
-                <p>info@example.com</p>
-              </div>
-              <div class="col-md-3 info">
-                <i class="ion-ios-telephone-outline"></i>
-                <p>+1 5589 55488 55</p>
-              </div>
-            </div>
-
-            <div class="form">
-              <div id="sendmessage">Your message has been sent. Thank you!</div>
-              <div id="errormessage"></div>
-              <form action="" method="post" role="form" class="contactForm">
-                <div class="form-row">
-                  <div class="form-group col-lg-6">
-                    <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
-                    <div class="validation"></div>
-                  </div>
-                  <div class="form-group col-lg-6">
-                    <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" data-rule="email" data-msg="Please enter a valid email" />
-                    <div class="validation"></div>
-                  </div>
-                </div>
-                <div class="form-group">
-                  <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject" />
-                  <div class="validation"></div>
-                </div>
-                <div class="form-group">
-                  <textarea class="form-control" name="message" rows="5" data-rule="required" data-msg="Please write something for us" placeholder="Message"></textarea>
-                  <div class="validation"></div>
-                </div>
-                <div class="text-center"><button type="submit" title="Send Message">Send Message</button></div>
-              </form>
-            </div>
-          </div>
-
-        </div>
-
-      </div>
-    </section><!-- #contact -->
-
-  </main>
-
+   {%block main_content%}
+   {%endblock%}
   <!--==========================
     Footer
   ============================-->
@@ -521,10 +132,6 @@
             
           </div>
 
-          <div class="col-lg-3 col-md-6 footer-links">
-            <img src="{%static 'erc/img/RepairBot.png' %}" alt="" class="img-fluid">
-          </div>
-
           <div class="col-lg-3 col-md-6 footer-contact">
             <h4>Contact Us</h4>
             <p>
@@ -544,6 +151,12 @@
             </div>
 
           </div>
+
+          <div class="col-lg-3 col-md-6 footer-links">
+            <img src="{%static 'erc/img/RepairBot.png' %}" alt="" class="img-fluid">
+          </div>
+
+          
 
           <div class="col-lg-3 col-md-6 footer-newsletter">
             <h4>Our Newsletter</h4>
@@ -597,7 +210,6 @@
 
 </body>
 </html>
-
 
 
 <!--==========================

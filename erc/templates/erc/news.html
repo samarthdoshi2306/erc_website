@@ -1,0 +1,75 @@
+{% extends 'erc/base_events_news.html' %}
+
+{% block title %}Newsletters{% endblock %}
+
+
+{% block head %}
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+<style>
+    .iframe-container {
+    padding-bottom: 80%;
+    padding-top: 10px; height: 0; overflow: hidden;
+}
+
+.iframe-container iframe,
+.iframe-container object,
+.iframe-container embed {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+</style>
+
+{% endblock %}
+
+
+{% block body %}
+
+
+        <section id="portfolio" class="clearfix">
+      <div class="container">
+
+        <header class="section-header">
+          <h3 class="section-title">Our newsletters</h3>
+        </header>
+
+        <div class="row">
+          <div class="col-lg-12">
+            <ul id="portfolio-flters">
+           
+            </ul>
+          </div>
+        </div>
+
+        <div class="row portfolio-container">
+
+          {%for newss in news%}
+
+          <div class="col-lg-4 col-md-6 portfolio-item  {{newss.filterClass}} footer-links" data-wow-delay="0.1s">
+            <div class="portfolio-wrap">
+              <img src="{{newss.image.url}}" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4><a href="{{newss.get_absolute_url}}">{{newss.headline}}-{{newss.date}}</a></h4>
+                    <br>
+                <div>
+                  <div  class="container">
+        <div> <a class="btn btn-primary view-pdf" style="border-radius:50%" href="{{newss.pdf.url}}"><i class="ion ion-eye"></i></a></div>
+	</div>
+
+
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {%endfor%}
+
+        </div>
+
+      </div>
+    </section><!-- #portfolio -->
+
+{% endblock %}

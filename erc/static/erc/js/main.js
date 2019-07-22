@@ -39,7 +39,7 @@
       $('#header').removeClass('header-scrolled');
     }
     //popup window
-    if ($(window).scrollTop() > $('#testimonials').offset().top &&popup) {
+    if ($(window).scrollTop() > $('#contact').offset().top &&popup) {
       var link = document.getElementById('newsletter-popup-button');
       link.click();
       popup=false;
@@ -47,12 +47,12 @@
   }
   });
   //popup window
-  if ($(window).scrollTop() > $('#testimonials').offset().top &&popup) {
-      var link = document.getElementById('newsletter-popup-button');
-      link.click();
-      popup=false;
-     $('.popup').fadeIn("slow");
-  }
+  // if ($(window).scrollTop() > $('#testimonials').offset().top &&popup) {
+  //     var link = document.getElementById('newsletter-popup-button');
+  //     link.click();
+  //     popup=false;
+  //    $('.popup').fadeIn("slow");
+  // }
 
   if ($(window).scrollTop() > 100) {
     $('#header').addClass('header-scrolled');

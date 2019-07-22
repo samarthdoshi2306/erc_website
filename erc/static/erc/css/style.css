@@ -1504,9 +1504,56 @@ h6 {
 .highlight .gc { color: #999; background-color: #EAF2F5; }
 
 
+
+/*Blog*/  
+
+
 .bloglist {
 
   width: 100px;
   height: 100px;
 
 }
+
+#portfolio .portfolio-item .portfolio-wrap2:hover{
+  background: black;
+  /*background-color: red;*/
+  /*text-decoration-color: white-space: te;*/
+  color: white;
+  border-radius: 3%;
+}
+
+#portfolio .portfolio-item .portfolio-wrap2 a:hover {
+  background: black;
+  /*background-color: red;*/
+  /*text-decoration-color: white-space: te;*/
+  color: white;
+}
+
+
+#portfolio2 {
+  padding: 60px 0;
+  box-shadow: inset 0px 0px 12px 0px rgba(0, 0, 0, 0.1);
+  background: rgba(225,255,155,0.8);
+}
+
+
+/*
+.btn-get-started
+
+{
+  font-family: "Montserrat", sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  display: inline-block;
+  padding: 10px 32px;
+  border-radius: 50px;
+  transition: 0.5s;
+  margin: 0 20px 20px 0;
+  color: #fff;
+  background: #007bff;
+  border: 2px solid #007bff;
+  color: #fff;
+}
+*/

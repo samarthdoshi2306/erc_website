@@ -2,7 +2,7 @@ from django.http import Http404
 import django.views.generic as generic_views
 from django.shortcuts import render
 from .models import *
-from .forms import *
+from .forms import EventForm,NewsForm
 from django.db import connections
 
 # Create your views here.
@@ -68,3 +68,8 @@ class create_event(generic_views.CreateView):
 	queryset=Event.objects.all()
 	template_name='erc/create_event.html'
 	form_class=EventForm
+
+class create_news(generic_views.CreateView):
+	queryset=News.objects.all()
+	template_name='erc/create_news.html'
+	form_class=NewsForm

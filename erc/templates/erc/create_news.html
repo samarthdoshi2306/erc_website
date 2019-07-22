@@ -1,0 +1,16 @@
+{% extends 'erc/base_events_news.html' %}
+
+{% block title %}Create News{% endblock %}
+
+
+
+
+{% block body %}
+<br>
+<form method='POST'  action="../news/">{% csrf_token %}
+    {{ form.as_p }}
+    <input type='submit' value="Save"/ >
+</form>
+<br>
+{% endblock %}
+

@@ -32,6 +32,12 @@ class Blog(models.Model):
 	parts=models.IntegerField()
 	author=models.CharField(max_length=80)
 	date=models.DateField()
+	CATEGORY_CHOICES = (
+    ("informative", ("informative")),
+    ("tutorials", ("tutorials")),
+    ("projects", ("projects"))
+     )
+	filterClass=models.CharField(max_length=80,choices=CATEGORY_CHOICES, default="informative")
 	def get_absolute_url(self):
 		return reverse('erc:blog',kwargs={'name':self.title})
 

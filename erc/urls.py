@@ -17,8 +17,9 @@ urlpatterns = [
     #blog list
     path('blog',blogList,name='blogList'),
     #newsletter page
-    path('newsletter/<int:Newsletter_id>/', newsletter_detail, name='newsletter_detail'),
+        #path('newsletter/<int:Newsletter_id>/', newsletter_detail, name='newsletter_detail'),
     path('news/',news,name='news'),
+    #create event
     path('create_event/',create_event.as_view(),name='create_event')
 
 ]#+static(settings.MEDIA_URL,document_root=settings.MEDIA_ROOT)

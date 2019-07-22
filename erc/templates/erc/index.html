@@ -77,10 +77,11 @@
         <ul>
           <li class="active"><a href="#intro">Home</a></li>
           <li><a href="#about">About Us</a></li>
+          <li><a href="#blog">Blog</a></li>
           <li><a href="#portfolio">Events</a></li>
           <li><a href="#testimonials">Newsletter</a></li>
           <li><a href="#team">Team</a></li>
-          <li><a href="{{request.path}}testimonials">Testimonials</a></li>
+          <li><a href="/erc/testimonials">Testimonials</a></li>
           <!--li class="drop-down"><a href="">Drop Down</a>
             <ul>
               <li><a href="#">Drop Down 1</a></li>
@@ -153,54 +154,71 @@
             <h4><p  style="text-align: center;" >
              <!-- <br> <br> -->
             
-            Watt's up! Greetings from Electronics & Robotics Club IIT Bombay!
+            <strong>
+            Watt's up! </strong> Greetings from Electronics & Robotics Club IIT Bombay!
             We cater to every individual who ever wanted to
             design their own circuit and control their own bot.</p> <br></h4>
             <p style="text-align: center;">
               We are a club that satiates the techie you all possess! The Electronics and Robotics Club was born from the two of its parent clubs(guess which? :p), 2017 being the year of christening. We are headed by our Manager, Jian Vora and our Institute Secretary, Anirudh Mittal. We are a part of ITC, or the Institute Technical Council, IIT Bombay's primary technical body. Other than that we have seven conveners along with many volunteers.
             </p>
             <p style="text-align: center;">
-              The main function of the club is to organize events like Sessions, Hackathons, General Championships, Competitions, Workshops, etc. throughout the year. We also maintain a tutorial database and a blog and we are ALWAYS open for contribuitions.
+              The main function of the club is to organize events like Sessions, Hackathons, General Championships, Competitions, Workshops, etc. throughout the year. 
             </p>
-            <p style="text-align: center; margin-bottom: 0px;" >
-              We love people contacting us, so drop us a line on Facebook, we'll be waiting! <br>  <h1  style="text-align: center;">😃 </h1> 
-            </p>
+            
           </div>
 
+<section id="blog"> 
+          <header class="section-header">
+          <h3>ERC Tech Blogs</h3>
+          
+        </header>
+          <div class="row about-container background justify-content-center" id="#blog">
 
-          <div class="row about-container">
-
-          <div class="col-lg-6 content order-lg-1 order-2">
+          <!-- <div class="col-lg-6 content order-lg-1 order-2"> -->
+            <div class="content" style="align-self: center;">
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+              <strong>
+              We also maintain a tutorial database and a tech-blog and we are ALWAYS open for contribuitions.
+            </strong>
             </p>
 
             <div class="icon-box wow fadeInUp">
               <div class="icon"><i class="fa fa-shopping-bag"></i></div>
-              <h4 class="title"><a href="">Eiusmod Tempor</a></h4>
-              <p class="description">Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi</p>
+              <h4 class="title"><a href="/erc/blog">Informative</a></h4>
+              <p class="description">
+                Info on how to learn stuff 
+              </p>
             </div>
 
             <div class="icon-box wow fadeInUp" data-wow-delay="0.2s">
               <div class="icon"><i class="fa fa-photo"></i></div>
-              <h4 class="title"><a href="">Magni Dolores</a></h4>
-              <p class="description">Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+              <h4 class="title"><a href="/erc/blog">Tutorials</a></h4>
+              <p class="description">
+                Tutorials by the students. 
+              </p>
             </div>
 
             <div class="icon-box wow fadeInUp" data-wow-delay="0.4s">
               <div class="icon"><i class="fa fa-bar-chart"></i></div>
-              <h4 class="title"><a href="">Dolor Sitema</a></h4>
+              <h4 class="title"><a href="/erc/blog">Projects</a></h4>
 
-              <p class="description">Minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat tarad limino ata</p>
+              <p class="description">
+                Get Blogs on projects done under ERC by our very own seniors of IITB!
+              </p>
             </div>
 
           </div>
 
-          <div class="col-lg-6 background order-lg-2 order-1 wow fadeInUp">
+          <!-- <div class="col-lg-6 background order-lg-2 order-1 wow fadeInUp">
             <img src="{% static 'erc/img/sitelogo.png' %}" class="img-fluid" alt="">
-          </div>
+          </div> -->
         </div>
-        </div>
+
+        <p style="text-align: center; margin-bottom: 0px;" >
+          <br><br>
+              We love people contacting us, so drop us a line on Facebook, we'll be waiting! <br>  <h1  style="text-align: center;">😃 </h1> 
+            </p>
+        </section>
 
 
         <!-- <div class="row about-extra">
@@ -340,7 +358,7 @@
                 });
               }
             </script-->
-            <a class="close" href="#testimonials"id="close-popup">&times;</a>
+            <a class="close" href="#contact"id="close-popup">&times;</a>
             <strong>Subscribe to our newsletter and to the path of being a tech guru!</strong>
             <br><br>
             <div class="content">

@@ -492,12 +492,14 @@ h6 {
 
 #about {
   /*background: rgba(221,221,221,0.5);*/
-  background: #e1f5ff;
+  /*background: #e1f5ff;*/
+  background: #fff;
   padding: 60px 0;
 }
 
 #about .about-container .background {
   margin: 20px 0;
+  background: inherit;
 }
 
 #about .about-container .content {

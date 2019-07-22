@@ -53,12 +53,12 @@ def reView(request,*args, **kwargs):
 	revs=reviews.objects.all()
 	return render(request,'erc/reviews/testimonials.html',{'revs':revs})
 
-def newsletter_detail(request,Newsletter_id):
-	try:
-		newsletter=Newsletter.objects.get(pk=Newsletter_id)
-	except Newsletter.DoesNotExist:
-		raise Http404("Newsletter Does Not Exist")
-	return render(request,'erc/newsletter_detail.html',{'newsletter':newsletter})
+# def newsletter_detail(request,Newsletter_id):
+# 	try:
+# 		newsletter=Newsletter.objects.get(pk=Newsletter_id)
+# 	except Newsletter.DoesNotExist:
+# 		raise Http404("Newsletter Does Not Exist")
+# 	return render(request,'erc/newsletter_detail.html',{'newsletter':newsletter})
 
 def news(request):
 	news=News.objects.all().order_by('-id')

@@ -19,14 +19,22 @@
             </ul>
           </div>
         </div>
-
+          <style type="text/css">
+          .bloga{
+            style="background-color: red;
+          }
+      </style>
         <div class="row portfolio-container">
           {% for blog in blogs %}
-          <div class="col-lg-4 col-md-6 portfolio-item {{blog.filterClass}} ">
+          <div class="col-lg-4 col-md-6 portfolio-item {{blog.filterClass}} vishwajeet  "  >
             <a href="{{blog.get_absolute_url}}">{{blog.title}}</a>
+            <br> <h4 style="font-weight: bold;">{{blog.content}}</h4>
+            Posted by {{blog.author}} <br>
+            on {{blog.date}}
           </div>
            {% endfor %}
       </div>
+      
     </section><!-- #portfolio -->
     
    

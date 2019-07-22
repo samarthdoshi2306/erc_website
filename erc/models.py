@@ -38,6 +38,9 @@ class Blog(models.Model):
     ("projects", ("projects"))
      )
 	filterClass=models.CharField(max_length=80,choices=CATEGORY_CHOICES, default="informative")
+	content=models.TextField(null=True,blank=True,default="Don't know")
+
+
 	def get_absolute_url(self):
 		return reverse('erc:blog',kwargs={'name':self.title})
 

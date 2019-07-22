@@ -1502,3 +1502,11 @@ h6 {
 .highlight .vi { color: teal; }
 .highlight .il { color: #009999; }
 .highlight .gc { color: #999; background-color: #EAF2F5; }
+
+
+.bloglist {
+
+  width: 100px;
+  height: 100px;
+
+}

@@ -2,7 +2,7 @@
 {% block blog %}
 
 <main id="main">
-<section id="portfolio" class="clearfix" style="background: #C5FAEE;">
+<section id="portfolio" class="clearfix" style="background: rgba(225,255,155,0.8)">
       <div class="container" >
 
         <header class="section-header">
@@ -19,20 +19,22 @@
             </ul>
           </div>
         </div>
-          <style type="text/css">
-          .bloga{
-            style="background-color: red;
-          }
-      </style>
+          
+
         <div class="row portfolio-container">
           {% for blog in blogs %}
           <a href="{{blog.get_absolute_url}}">
             <div class="col-lg-4 col-md-6 portfolio-item {{blog.filterClass}} vishwajeet  "  >
             <div class="portfolio-wrap2">
-            <a href="{{blog.get_absolute_url}}">{{blog.title}}</a>
-            <br> <h4 style="font-weight: bold;">{{blog.content}}</h4>
-            Posted by {{blog.author}} <br>
-            on {{blog.date}}
+            <br> <h4 style="font-weight: bold; padding: 5px;">{{blog.title}}</h4>
+            <a href="{{blog.get_absolute_url}}">
+              <p style="padding: 5px">
+                <strong>{{blog.content}}</strong>
+              </p>
+            </a>
+            
+            <p  style="padding: 5px;">{{blog.author}}<br>{{blog.date}}</p> 
+             
           </div>
         </div>
           </a>
@@ -41,16 +43,7 @@
       
     </section><!-- #portfolio -->
     
-   
-   
-
-    <!--==========================
-      Testimonial Section
-    ============================-->
-    <section id="testimonials" class="section-bg">
-      
-    </section><!-- #contact -->
-
+ 
   </main>
 
 {% endblock %}

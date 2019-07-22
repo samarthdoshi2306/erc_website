@@ -1514,20 +1514,21 @@ h6 {
   height: 100px;
 
 }
-
+#portfolio .portfolio-wrap2{
+  background: rgba(255,255,100,0.3);
+}
 #portfolio .portfolio-item .portfolio-wrap2:hover{
-  background: black;
+  background: rgba(100,100,250,0.3);
   /*background-color: red;*/
   /*text-decoration-color: white-space: te;*/
-  color: white;
-  border-radius: 3%;
+  
 }
 
 #portfolio .portfolio-item .portfolio-wrap2 a:hover {
-  background: black;
+  /*background: black;*/
   /*background-color: red;*/
   /*text-decoration-color: white-space: te;*/
-  color: white;
+  color: darkblue;
 }
 
 

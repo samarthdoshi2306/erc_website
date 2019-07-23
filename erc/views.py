@@ -68,3 +68,8 @@ class create_event(generic_views.CreateView):
 	queryset=Event.objects.all()
 	template_name='erc/create_event.html'
 	form_class=EventForm
+
+class create_news(generic_views.CreateView):
+	queryset=News.objects.all()
+	template_name='erc/create_news.html'
+	form_class=NewsForm

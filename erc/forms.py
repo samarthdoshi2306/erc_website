@@ -1,5 +1,5 @@
 from django import forms
-from erc.models import Event
+from erc.models import *
 
 class EventForm(forms.ModelForm):
     class Meta:
@@ -13,4 +13,15 @@ class EventForm(forms.ModelForm):
             'date',
             'img',
             'filterClass',
+        ]
+
+
+class NewsForm(forms.ModelForm):
+    class Meta:
+        model=News
+        fields=[
+            'image',
+            'date',
+            'pdf',
+            'headline',
         ]

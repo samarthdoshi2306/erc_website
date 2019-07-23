@@ -1,5 +1,6 @@
 {% extends "erc/blog/BlogBase.html" %}
 {% block blog %}
+<div class="blog-content">
 title      = gear
 heading    = Gears
 subheading = A gear is defined as “a toothed wheel that works with others to alter the relation between the speed of a driving mechanism (such as the engine of a vehicle) and the speed of the driven parts (the wheels).”
@@ -126,11 +127,11 @@ The center one is a compound gear.</p>
     return images[part-1]
   };
   var i=1;
-  for (i = 1; i <=1; i++) { 
+  for (i = 1; i <=9; i++) { 
         document.getElementById("img" + i).src ="/media/"+getURL(i); 
     }
   
 </script>        
-
+</div>
 {% endblock %}
 

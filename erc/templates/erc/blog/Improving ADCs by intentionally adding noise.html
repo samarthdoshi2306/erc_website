@@ -1,5 +1,6 @@
 {% extends "erc/blog/BlogBase.html" %}
 {% block blog %}
+<div class="blog-content">
 <p>Everybody has this presumed notion that noise in an electronic system is bad.
 We all learn about ways to reduce noise in the circuits we implement to get
 better results. In this post we will see a case where intentionally <em>adding</em>
@@ -149,9 +150,10 @@ wikipedia page of Dither</em></p>
 		return images[part-1]
 	};
 	var i=1;
- 	for (i = 1; i <=3; i++) { 
+ 	for (i = 1; i <=2; i++) { 
   			document.getElementById("img" + i).src ="/media/"+getURL(i); 
 		}
 	
 </script>
+</div>
 {% endblock %}	

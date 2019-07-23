@@ -1,0 +1,46 @@
+
+body {
+  background: white;
+  color: #444;
+  font-family: "Open Sans", sans-serif;
+
+  /*font-family: Arial, Helvetica, sans-serif;*/
+  
+}
+#intro {
+  width: 100%; 
+  background: linear-gradient(to top, rgba(46, 49, 65, 0.3), rgba(46, 49, 65, 0.8)),url("../img/intro-bg.jpg") center bottom no-repeat;
+  padding: auto;
+  padding-top: 25em;
+  height: 61em;
+}
+
+.blog-content {
+	/*margin: 1% 5% `1% 5%;*/
+	/*
+	padding-left: 1em;
+	padding-right: 1em: */
+	margin-left: 15%;
+	margin-right: 15% ;
+}
+
+.blog-content img , .blog-content iframe{
+	/*margin: 1% 5% `1% 5%;*/
+	/*margin-left: 0`em;*/
+	/*margin-right: 0em; */
+	max-width: 100%;
+}
+
+@media (max-width: 741px)
+{
+
+	.blog-content {
+	/*margin: 1% 5% `1% 5%;*/
+	/*
+	padding-left: 1em;
+	padding-right: 1em: */
+	margin-left: 5%;
+	margin-right: 5% ;
+}
+
+}

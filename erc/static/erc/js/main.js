@@ -40,7 +40,7 @@
     }
     //popup window
     if ($(window).scrollTop() > $('#testimonials').offset().top 
-      && $(window).scrollTop() < $('#team').offset().top
+      && $(window).scrollTop() < $('#team').offset().top-100
       &&popup) {
       var link = document.getElementById('newsletter-popup-button');
       link.click();

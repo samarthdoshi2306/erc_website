@@ -370,15 +370,16 @@
                 });
               }
             </script-->
-            <a class="close" href="#testimonials"id="close-popup">&times;</a>
+            <a class="close" href="#" id="close-popup">&times;</a>
             <strong>Subscribe to our newsletter and to the path of being a tech guru!</strong>
             <br><br>
             <div class="content">
-            <form action="" method="post"  value="newsletter">
-              <input type="email" name="email">
-              <input type="submit" class="square_btn"value=Subscribe>
-            </form>
-          </div>
+           <form id="form" target="_self" onsubmit="return postToGoogle();" action="" autocomplete="off"> 
+                <input id="nameField" name="entry.1636625767" placeholder="Enter your email" type="email" required>
+                <button id="send" type="submit" class="common_btn square_btn">Register Now</button>
+          </form>
+        <h3 id="success-msg" style="text-align: center !important; margin-top:190px !important; display:none; color:black"> Thank you for subscribing</h3>
+           </div>
           </div>
         </div>
 
@@ -601,10 +602,11 @@
           <div class="col-lg-3 col-md-6 footer-newsletter">
             <h4>Our Newsletter</h4>
             <p>Subscribe to our newsletter and to the path of being a tech guru!</p>
-            <form action="" method="post" id="newsletter-form">
-              <input type="email" name="email"><input type="submit"  value="Subscribe">
-            
-            </form>
+            <form id="form" target="_self" onsubmit="return postToGoogle();" action="" autocomplete="off"> 
+                <input id="nameField" name="entry.1636625767" placeholder="Enter your email" type="email" required>
+                <button id="send" type="submit" class="common_btn square_btn">Register Now</button>
+          </form>
+        <h3 id="success-msg" style="text-align: center !important; margin-top:190px !important; display:none; color:black"> Thank you for subscribing</h3>
           </div>
 
         </div>
@@ -648,6 +650,7 @@
 
   <!-- Template Main Javascript File -->
   <script src="{% static 'erc/js/main.js'  %}"></script>
+  <script src="{% static 'erc/js/email.js'  %}"></script>
 
 </body>
 </html>

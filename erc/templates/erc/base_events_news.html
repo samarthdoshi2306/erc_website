@@ -57,6 +57,7 @@
 
       <nav class="main-nav float-right d-none d-lg-block">
         <ul>
+          {%  block links%}
           <li><a href="/erc">Home</a></li>
           <li><a href="/erc/#about">About Us</a></li>
           <li><a href="/erc/blog">Blog</a></li>
@@ -64,6 +65,8 @@
           <li><a href="/erc/news">Newsletter</a></li>
           <li><a href="/erc/#team">Team</a></li>
           <li><a href="/erc/testimonials">Testimonials</a></li>
+          <li><a href="/erc/#contact">Contact Us</a></li>
+          {% endblock %}
           <!--li class="drop-down"><a href="">Drop Down</a>
             <ul>
               <li><a href="#">Drop Down 1</a></li>
@@ -81,7 +84,7 @@
               <li><a href="#">Drop Down 5</a></li>
             </ul>
           </li-->
-          <li><a href="/erc/#contact">Contact Us</a></li>
+          
         </ul>
       </nav><!-- .main-nav -->
       
@@ -94,16 +97,17 @@
   <section id="intro" class="clearfix">
     <div class="container">
 
-      <div class="intro-img">
-        <img src="img/intro-img.svg" alt="" class="img-fluid">
-      </div>
+      
 
       <div class="intro-info">
         <h2 style="font-style: italic; font-weight: bold;">Electronics and <br>Robotics club<br>IIT Bombay</h2>
         <div>
-          <a href="#about" class="btn-get-started scrollto">About Us </a>
-          <a href="#portfolio" class="btn-services scrollto">Our Events</a>
+          <a href="#portfolio" class="btn-get-started scrollto">Our Events </a>
+          <a href="#about" class="btn-services scrollto">About Us </a>
         </div>
+        <div>
+        <a href="/erc/blog" class="btn-get-started scrollto">Blogs</a>
+      </div>
       </div>
 
     </div>

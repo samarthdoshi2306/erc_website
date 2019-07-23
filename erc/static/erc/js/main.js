@@ -39,7 +39,9 @@
       $('#header').removeClass('header-scrolled');
     }
     //popup window
-    if ($(window).scrollTop() > $('#contact').offset().top &&popup) {
+    if ($(window).scrollTop() > $('#testimonials').offset().top 
+      && $(window).scrollTop() < $('#team').offset().top
+      &&popup) {
       var link = document.getElementById('newsletter-popup-button');
       link.click();
       popup=false;
